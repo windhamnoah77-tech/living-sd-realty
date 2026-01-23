@@ -2,9 +2,22 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Trust & Estate Real Estate in San Diego | Trustee & Executor Sales",
+  title: "Trust & Estate Real Estate | Trustees & Executors",
   description:
-    "Trust & estate real estate representation for trustees and executors in San Diego. Defensible pricing, disciplined marketing, and clean execution—built for fiduciary-level decisions.",
+    "Trust and estate real estate guidance for trustees and executors: defensible pricing, disciplined disclosures, attorney/CPA coordination, and a clean file from list to close.",
+  alternates: { canonical: "/trust-estate" },
+  openGraph: {
+    title: "Trust & Estate Real Estate | Trustees & Executors",
+    description:
+      "Trust and estate real estate guidance for trustees and executors: defensible pricing, disciplined disclosures, attorney/CPA coordination, and a clean file from list to close.",
+    url: "/trust-estate",
+    type: "website",
+  },
+  twitter: {
+    title: "Trust & Estate Real Estate | Trustees & Executors",
+    description:
+      "Trust and estate real estate guidance for trustees and executors: defensible pricing, disciplined disclosures, clean execution.",
+  },
 };
 
 const steps = [

@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Trust & Estate + Investor Real Estate | Living San Diego Realty",
+  title: "Contact | Living San Diego Realty",
   description:
-    "Contact Noah Windham for trust & estate real estate representation (trustees/executors) and investor acquisitions/dispositions across San Diego and California by request.",
+    "Contact Noah Windham for trust & estate property sales and investor transactions across San Diego and California. Start with a short call and a clean action plan.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact | Living San Diego Realty",
+    description:
+      "Contact Noah Windham for trust & estate property sales and investor transactions across San Diego and California. Start with a short call and a clean action plan.",
+    url: "/contact",
+    type: "website",
+  },
+  twitter: {
+    title: "Contact | Living San Diego Realty",
+    description:
+      "Contact Noah Windham for trust & estate property sales and investor transactions across San Diego and California.",
+  },
 };
 
 export default function ContactPage() {

@@ -2,23 +2,38 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { posts, topics } from "./_posts";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
-  title: "Insights | Trust & Estate + Investor Real Estate | Living San Diego Realty",
+  title: "Insights | Trust Sales, Executors, Investors",
   description:
-    "Trust & estate real estate guidance for trustees and executors, plus investor-focused underwriting notes. San Diego-first, California by request.",
+    "Practical notes on trust and estate property sales, executor responsibilities, pricing logic, disclosures, investor underwriting, and market strategy across California.",
   alternates: { canonical: "/insights" },
+  openGraph: {
+    title: "Insights | Trust Sales, Executors, Investors",
+    description:
+      "Practical notes on trust and estate property sales, executor responsibilities, pricing logic, disclosures, investor underwriting, and market strategy across California.",
+    url: "/insights",
+    type: "website",
+  },
+  twitter: {
+    title: "Insights | Trust Sales, Executors, Investors",
+    description:
+      "Practical notes on trust and estate property sales, executor responsibilities, pricing logic, disclosures, investor underwriting, and market strategy across California.",
+  },
 };
 
 function sortNewest(a: { date: string }, b: { date: string }) {
   return b.date.localeCompare(a.date);
 }
 
-export default function InsightsIndex({
+export default async function InsightsIndex({
   searchParams,
 }: {
-  searchParams?: { topic?: string };
+  searchParams?: { topic?: string } | Promise<{ topic?: string }>;
 }) {
-  const topic = (searchParams?.topic || "all").toLowerCase();
+  const sp = await searchParams;
+  const topic = (sp?.topic || "all").toLowerCase();
 
   const filtered = posts
     .filter((p) => {
@@ -66,7 +81,10 @@ export default function InsightsIndex({
             {topics.map((t) => {
               const active =
                 (topic === "all" && t.key === "all") || topic === t.key;
-              const href = t.key === "all" ? "/insights" : `/insights?topic=${t.key}`;
+
+              const href =
+                t.key === "all" ? "/insights" : `/insights?topic=${t.key}`;
+
               return (
                 <Link
                   key={t.key}
@@ -91,12 +109,14 @@ export default function InsightsIndex({
             >
               Trust &amp; estate lane
             </Link>
+
             <Link
               href="/investors"
               className="px-5 py-3 rounded-2xl border border-neutral-300 text-neutral-800 hover:border-black transition"
             >
               Investor lane
             </Link>
+
             <Link
               href="/contact"
               className="px-5 py-3 rounded-2xl border border-black bg-black text-white hover:bg-white hover:text-black transition"
@@ -106,7 +126,6 @@ export default function InsightsIndex({
           </div>
         </div>
 
-        {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(blogLd) }}
@@ -123,9 +142,7 @@ export default function InsightsIndex({
                 and investors ask before committing to a plan.
               </p>
             </div>
-            <span className="hidden md:inline-flex pill">
-              {filtered.length} guides
-            </span>
+            <span className="hidden md:inline-flex pill">{filtered.length} guides</span>
           </div>
 
           <div className="mt-8 grid md:grid-cols-2 gap-6">
@@ -135,9 +152,7 @@ export default function InsightsIndex({
                   <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
                     {p.category}
                   </div>
-                  <div className="text-xs text-neutral-500">
-                    {p.readingTime}
-                  </div>
+                  <div className="text-xs text-neutral-500">{p.readingTime}</div>
                 </div>
 
                 <h3 className="mt-3 brand-serif text-2xl">{p.title}</h3>
@@ -176,11 +191,13 @@ export default function InsightsIndex({
               SEO positioning (for Google + humans)
             </div>
             <p className="mt-4 text-neutral-700 max-w-prose">
-              <span className="font-semibold">Trust &amp; estate real estate in San Diego</span>{" "}
+              <span className="font-semibold">
+                Trust &amp; estate real estate in San Diego
+              </span>{" "}
               is not a standard retail sale. Trustees and executors need defensible
               valuation logic, disciplined disclosures, tight terms, and a clean file
-              from listing to close. Investors need conservative underwriting,
-              fast execution, and a pipeline that’s filtered — not noisy.
+              from listing to close. Investors need conservative underwriting, fast
+              execution, and a pipeline that’s filtered — not noisy.
             </p>
           </div>
         </div>

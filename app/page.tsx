@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Trust & Estate Real Estate in San Diego | Trustees, Executors & Investors",
+  title: "Trust & Estate Real Estate | Living San Diego Realty",
   description:
-    "Trust & estate real estate representation for trustees, executors, and families—plus investor acquisitions and dispositions (on- and off-market) across San Diego, the Bay Area, and Los Angeles.",
+    "Trust & estate real estate representation for trustees, executors, and serious investors across San Diego, the Bay Area, and Los Angeles. Defensible pricing, disciplined marketing, clean execution.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "Trust & Estate Real Estate | Living San Diego Realty",
+    description:
+      "Trust & estate real estate representation for trustees, executors, and serious investors across San Diego, the Bay Area, and Los Angeles. Defensible pricing, disciplined marketing, clean execution.",
+    url: "/",
+    type: "website",
+  },
+  twitter: {
+    title: "Trust & Estate Real Estate | Living San Diego Realty",
+    description:
+      "Trust & estate real estate representation for trustees, executors, and serious investors across San Diego, the Bay Area, and Los Angeles.",
+  },
 };
+
 
 export default function HomePage() {
   return (

@@ -2,9 +2,22 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Process | Trust & Estate + Investor Execution | Living San Diego Realty",
+  title: "Process | Trust & Estate + Investor Execution",
   description:
-    "A disciplined process for trustees, executors, and serious investors: defensible pricing, clean disclosures, tight terms, and a file that stays organized from listing to close.",
+    "A fiduciary-grade process for trust and estate property sales and investor transactions: valuation, disclosures, marketing, negotiation, and clean close.",
+  alternates: { canonical: "/process" },
+  openGraph: {
+    title: "Process | Trust & Estate + Investor Execution",
+    description:
+      "A fiduciary-grade process for trust and estate property sales and investor transactions: valuation, disclosures, marketing, negotiation, and clean close.",
+    url: "/process",
+    type: "website",
+  },
+  twitter: {
+    title: "Process | Trust & Estate + Investor Execution",
+    description:
+      "A fiduciary-grade process for trust and estate property sales and investor transactions: valuation, disclosures, marketing, negotiation, and clean close.",
+  },
 };
 
 type Step = {

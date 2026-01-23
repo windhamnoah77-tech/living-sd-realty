@@ -2,9 +2,22 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Investors | On-Market + Off-Market Acquisitions | Living San Diego Realty",
+  title: "Investors | Off-Market + On-Market Acquisitions",
   description:
-    "Investor-focused acquisitions and dispositions in San Diego (and CA by request). Criteria-first sourcing, conservative underwriting, clean terms, and fast execution.",
+    "Investor representation across San Diego and California: off-market sourcing, conservative underwriting, clean terms, fast execution, and disciplined dispositions.",
+  alternates: { canonical: "/investors" },
+  openGraph: {
+    title: "Investors | Off-Market + On-Market Acquisitions",
+    description:
+      "Investor representation across San Diego and California: off-market sourcing, conservative underwriting, clean terms, fast execution, and disciplined dispositions.",
+    url: "/investors",
+    type: "website",
+  },
+  twitter: {
+    title: "Investors | Off-Market + On-Market Acquisitions",
+    description:
+      "Investor representation across San Diego and California: off-market sourcing, conservative underwriting, clean terms, fast execution, and disciplined dispositions.",
+  },
 };
 
 type Box = {
