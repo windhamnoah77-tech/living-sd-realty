@@ -1,3 +1,4 @@
+"use client";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -148,12 +149,30 @@ export default function ContactPage() {
             </p>
 
             <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              className="mt-6 space-y-3 text-sm"
-            >
+  name="contact"
+  onSubmit={async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (!res.ok) throw new Error(`Bad response: ${res.status}`);
+
+      form.reset();
+      alert("Sent. I’ll reply directly.");
+    } catch (err) {
+      alert("Submit failed. Email me at Noah@rbhaley.com.");
+    }
+  }}
+  className="mt-6 space-y-3 text-sm"
+>
+
               <input type="hidden" name="form-name" value="contact" />
 
               <p className="hidden">
