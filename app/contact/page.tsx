@@ -1,5 +1,5 @@
-"use client";
 import type { Metadata } from "next";
+import ContactFormClient from "./ContactFormClient";
 
 export const metadata: Metadata = {
   title: "Contact | Living San Diego Realty",
@@ -148,12 +148,7 @@ export default function ContactPage() {
               Keep it brief—facts over stories.
             </p>
 
-            <form
-  name="contact"
-  onSubmit={async (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+            <ContactFormClient />
 
     try {
       const res = await fetch("/__forms.html", {
