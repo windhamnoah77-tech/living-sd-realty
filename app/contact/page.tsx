@@ -190,7 +190,7 @@ export default function ContactPage() {
                   className="w-full rounded-2xl border border-neutral-300 px-4 py-3"
                   defaultValue="Unknown / TBF"
                 >
-                  <option>Value</option>
+                  <option>Property value</option>
                   <option>$0–$750k</option>
                   <option>$750k–$1.5M</option>
                   <option>$1.5M–$3M</option>
