@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3001";
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+  "https://livingsandiegorealty.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,7 +30,10 @@ export const metadata: Metadata = {
   description:
     "Trust & estate real estate representation for trustees, executors, and serious investors. Defensible pricing, disciplined marketing, and clean execution.",
 
-  // ✅ Icons (use /public/icon.png and /public/apple-icon.png)
+  verification: {
+    google: "J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM",
+  },
+
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
@@ -41,6 +45,7 @@ export const metadata: Metadata = {
       "Trust & estate real estate representation for trustees, executors, and serious investors.",
     siteName: "Living San Diego Realty",
     type: "website",
+    url: "https://livingsandiegorealty.com",
     images: [
       {
         url: "/opengraph-image",
