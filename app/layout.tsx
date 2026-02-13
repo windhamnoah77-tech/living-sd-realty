@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -36,7 +37,6 @@ export const metadata: Metadata = {
   description:
     "Trust & estate real estate representation for trustees, executors, and serious investors. Defensible pricing, disciplined marketing, and clean execution.",
 
-  // This SHOULD work in modern Next, but we'll also add app/head.tsx (separately) to guarantee it.
   verification: {
     google: "J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM",
   },
@@ -85,6 +85,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {/* Google Analytics (GA4) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DS08FHFQ8N"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DS08FHFQ8N', { anonymize_ip: true });
+          `}
+        </Script>
+
         <Nav />
         {children}
         <Footer />
