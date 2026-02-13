@@ -190,7 +190,7 @@ export default function ContactPage() {
                   className="w-full rounded-2xl border border-neutral-300 px-4 py-3"
                   defaultValue="Unknown / TBF"
                 >
-                  <option>Unknown / TBF</option>
+                  <option>Value</option>
                   <option>$0–$750k</option>
                   <option>$750k–$1.5M</option>
                   <option>$1.5M–$3M</option>
@@ -200,7 +200,7 @@ export default function ContactPage() {
                 <select
                   name="timeline"
                   className="w-full rounded-2xl border border-neutral-300 px-4 py-3"
-                  defaultValue="0–30 days"
+                  defaultValue="Timeline"
                 >
                   <option>0–30 days</option>
                   <option>30–90 days</option>
