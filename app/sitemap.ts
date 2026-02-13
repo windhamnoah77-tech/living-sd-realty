@@ -3,18 +3,19 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-// CHANGE THIS if your domain differs (no trailing slash)
-const SITE_URL = "https://livingsandiegorealty.com";
+// No trailing slash
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://livingsandiegorealty.com";
 
 const POSTS_DIR = path.join(process.cwd(), "content/insights");
 
 type PostFrontmatter = {
   slug?: string;
-  date?: string;     // YYYY-MM-DD
-  updated?: string;  // YYYY-MM-DD
+  date?: string; // YYYY-MM-DD
+  updated?: string; // YYYY-MM-DD
 };
 
-function getInsightUrls() {
+function getInsightRoutes(): MetadataRoute.Sitemap {
   if (!fs.existsSync(POSTS_DIR)) return [];
 
   const files = fs
@@ -28,26 +29,46 @@ function getInsightUrls() {
     const fm = data as PostFrontmatter;
 
     const slug = fm.slug ?? slugFromFile;
-    const last = fm.updated ?? fm.date ?? new Date().toISOString().slice(0, 10);
+
+    // Use updated > date > today
+    const last =
+      fm.updated ?? fm.date ?? new Date().toISOString().slice(0, 10);
 
     return {
       url: `${SITE_URL}/insights/${slug}`,
       lastModified: new Date(last),
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.7,
     };
   });
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Put ALL of your important app routes here
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, lastModified: new Date(), priority: 1.0 },
-    { url: `${SITE_URL}/insights`, lastModified: new Date(), priority: 0.9 },
-    // Add any other important pages you want indexed faster:
-    // { url: `${SITE_URL}/contact`, lastModified: new Date(), priority: 0.6 },
+    { url: `${SITE_URL}/`, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
+
+    { url: `${SITE_URL}/trust-estate`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/investors`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+
+    { url: `${SITE_URL}/process`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/opportunities`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${SITE_URL}/service-areas`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+
+    { url: `${SITE_URL}/insights`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+
+    { url: `${SITE_URL}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
   ];
 
-  const insightRoutes = getInsightUrls();
+  const insightRoutes = getInsightRoutes();
 
-  return [...staticRoutes, ...insightRoutes];
+  // Optional: de-dupe just in case
+  const seen = new Set<string>();
+  const combined = [...staticRoutes, ...insightRoutes].filter((r) => {
+    if (seen.has(r.url)) return false;
+    seen.add(r.url);
+    return true;
+  });
+
+  return combined;
 }
