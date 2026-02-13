@@ -48,7 +48,7 @@ export default function ContactPage() {
   // Update these to your actual backup contacts
   const emailPrimary = "Noah@rbhaley.com";
   const phonePrimary = "(707) 305-6499";
-  const phoneBackup = "(XXX) XXX-XXXX"; // change this
+  const phoneBackup = "(619) 997-0178"; // change this
 
   return (
     <main className="page-section">
@@ -128,7 +128,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="mt-3 text-xs text-neutral-500">
-                If it’s urgent, call or text. Otherwise the form is best.
+                If it’s urgent, call or text.
               </div>
             </div>
           </section>
