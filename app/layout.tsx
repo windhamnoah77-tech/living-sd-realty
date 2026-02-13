@@ -15,9 +15,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Netlify env vars are often missing "https://". This prevents build crashes.
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
-  "https://livingsandiegorealty.com";
+  rawSiteUrl && rawSiteUrl.startsWith("http")
+    ? rawSiteUrl
+    : rawSiteUrl
+      ? `https://${rawSiteUrl}`
+      : "https://livingsandiegorealty.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -30,7 +36,7 @@ export const metadata: Metadata = {
   description:
     "Trust & estate real estate representation for trustees, executors, and serious investors. Defensible pricing, disciplined marketing, and clean execution.",
 
-  // keeping this is fine, but the hardcoded <head> below is what guarantees verification
+  // This SHOULD work in modern Next, but we'll also add app/head.tsx (separately) to guarantee it.
   verification: {
     google: "J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM",
   },
@@ -78,12 +84,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM"
-        />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Nav />
-        {children
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}
