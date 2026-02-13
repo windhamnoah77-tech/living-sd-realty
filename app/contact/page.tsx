@@ -202,6 +202,7 @@ export default function ContactPage() {
                   className="w-full rounded-2xl border border-neutral-300 px-4 py-3"
                   defaultValue="Timeline"
                 >
+                  <option>Timeline</option>
                   <option>0–30 days</option>
                   <option>30–90 days</option>
                   <option>3–6 months</option>
