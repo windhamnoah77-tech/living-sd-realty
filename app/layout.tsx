@@ -30,6 +30,7 @@ export const metadata: Metadata = {
   description:
     "Trust & estate real estate representation for trustees, executors, and serious investors. Defensible pricing, disciplined marketing, and clean execution.",
 
+  // keeping this is fine, but the hardcoded <head> below is what guarantees verification
   verification: {
     google: "J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM",
   },
@@ -77,11 +78,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM"
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Nav />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
-}
+        {children
