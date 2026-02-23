@@ -33,7 +33,7 @@ export default function Nav() {
         </div>
 
         {/* CENTER: Links */}
-        <nav className="hidden md:flex items-center gap-9 text-sm">
+        <nav className="hidden md:flex items-center gap-6 text-sm">
           {links.map((l) => {
             const active = pathname === l.href;
             return (
