@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
@@ -19,53 +19,71 @@ export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  // Close the mobile menu when route changes
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200/60 bg-white/80 backdrop-blur">
-      <div className="container flex items-center justify-between py-4">
-        {/* LEFT: Brand + Name (same group = sits together) */}
-        <div className="flex items-baseline gap-6 whitespace-nowrap">
-          <Link href="/" className="brand-serif text-lg tracking-wide">
-            Living San Diego Realty
-          </Link>
-          <span className="text-xs uppercase tracking-[0.15em] text-neutral-500">
-            Noah Windham
-          </span>
-        </div>
+      <div className="container py-4">
+        <div className="grid grid-cols-2 items-center gap-3 md:grid-cols-[auto,1fr,auto]">
+          {/* LEFT: Brand + Name */}
+          <div className="min-w-0">
+            <Link
+              href="/"
+              className="brand-serif block text-lg tracking-wide leading-none whitespace-nowrap"
+            >
+              Living San Diego Realty
+            </Link>
 
-        {/* CENTER: Links */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          {links.map((l) => {
-            const active = pathname === l.href;
-            return (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={`transition ${
-                  active ? "text-black" : "text-neutral-700 hover:text-black"
-                }`}
-              >
-                {l.label}
-              </Link>
-            );
-          })}
-        </nav>
+            {/* Hide name on small screens so it can't collide/overlap */}
+            <span className="hidden md:block mt-1 text-xs uppercase tracking-[0.15em] text-neutral-500 whitespace-nowrap">
+              Noah Windham
+            </span>
+          </div>
 
-        {/* RIGHT: CTA + Mobile menu */}
-        <div className="flex items-center gap-3">
-          <Link
-            href="/contact"
-            className="hidden md:inline-flex rounded-2xl border border-black bg-black px-5 py-3 text-sm text-white hover:bg-white hover:text-black transition"
-          >
-            Work with Noah
-          </Link>
+          {/* CENTER: Links (wraps nicely on desktop, never shows on mobile) */}
+          <nav className="hidden md:flex justify-center">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+              {links.map((l) => {
+                const active = pathname === l.href;
+                return (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className={`whitespace-nowrap transition ${
+                      active
+                        ? "text-black"
+                        : "text-neutral-700 hover:text-black"
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </nav>
 
-          <button
-            aria-label="Menu"
-            className="md:hidden p-2 rounded-full border border-neutral-300"
-            onClick={() => setOpen((v) => !v)}
-          >
-            ☰
-          </button>
+          {/* RIGHT: CTA + Mobile menu */}
+          <div className="flex items-center justify-end gap-3">
+            <Link
+              href="/contact"
+              className="hidden md:inline-flex rounded-2xl border border-black bg-black px-5 py-3 text-sm text-white transition hover:bg-white hover:text-black"
+            >
+              Work with Noah
+            </Link>
+
+            <button
+              type="button"
+              aria-label="Menu"
+              aria-expanded={open}
+              className="md:hidden inline-flex items-center justify-center p-2 rounded-full border border-neutral-300"
+              onClick={() => setOpen((v) => !v)}
+            >
+              ☰
+            </button>
+          </div>
         </div>
       </div>
 
@@ -77,15 +95,17 @@ export default function Nav() {
               <Link
                 key={l.href}
                 href={l.href}
-                onClick={() => setOpen(false)}
-                className="py-2 border-b last:border-0 text-neutral-800"
+                className={`py-2 border-b last:border-0 transition ${
+                  pathname === l.href
+                    ? "text-black"
+                    : "text-neutral-800 hover:text-black"
+                }`}
               >
                 {l.label}
               </Link>
             ))}
             <Link
               href="/contact"
-              onClick={() => setOpen(false)}
               className="mt-2 inline-flex justify-center rounded-2xl border border-black bg-black px-5 py-3 text-sm text-white"
             >
               Work with Noah
