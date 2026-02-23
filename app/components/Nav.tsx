@@ -23,7 +23,7 @@ export default function Nav() {
     <header className="sticky top-0 z-50 border-b border-neutral-200/60 bg-white/80 backdrop-blur">
       <div className="container flex items-center justify-between py-4">
         {/* LEFT: Brand + Name (same group = sits together) */}
-        <div className="flex items-baseline gap-1 whitespace-nowrap">
+        <div className="flex items-baseline gap-6 whitespace-nowrap">
           <Link href="/" className="brand-serif text-lg tracking-wide">
             Living San Diego Realty
           </Link>
