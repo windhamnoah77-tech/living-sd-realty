@@ -16,7 +16,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Netlify env vars are often missing "https://". This prevents build crashes.
 const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 
 const siteUrl =
@@ -28,24 +27,19 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-
   title: {
     default: "Living San Diego Realty | Noah Windham",
     template: "%s | Living San Diego Realty",
   },
-
   description:
     "Trust & estate real estate representation for trustees, executors, and serious investors. Defensible pricing, disciplined marketing, and clean execution.",
-
   verification: {
     google: "J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM",
   },
-
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
   },
-
   openGraph: {
     title: "Living San Diego Realty | Noah Windham",
     description:
@@ -62,7 +56,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Living San Diego Realty | Noah Windham",
@@ -70,7 +63,6 @@ export const metadata: Metadata = {
       "Trust & estate real estate representation for trustees, executors, and serious investors.",
     images: ["/opengraph-image"],
   },
-
   robots: {
     index: true,
     follow: true,
@@ -84,8 +76,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* Google Analytics (GA4) */}
+      <body className={`${geistSans.variable} ${geistMono.variable} min-h-screen`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DS08FHFQ8N"
           strategy="afterInteractive"
@@ -100,7 +91,12 @@ export default function RootLayout({
         </Script>
 
         <Nav />
-        {children}
+
+        {/* Consistent spacing under sticky header */}
+        <main className="pt-6">
+          {children}
+        </main>
+
         <Footer />
       </body>
     </html>
