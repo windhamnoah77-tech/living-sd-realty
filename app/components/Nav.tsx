@@ -19,16 +19,17 @@ export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  // Close the mobile menu when route changes
+  // Close mobile menu on route change
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200/60 bg-white/80 backdrop-blur">
-      <div className="container py-4">
-        <div className="grid grid-cols-2 items-center gap-3 md:grid-cols-[auto,1fr,auto]">
-          {/* LEFT: Brand + Name */}
+      <div className="container">
+        {/* TOP BAR */}
+        <div className="flex items-center justify-between py-4">
+          {/* LEFT: Brand */}
           <div className="min-w-0">
             <Link
               href="/"
@@ -36,23 +37,21 @@ export default function Nav() {
             >
               Living San Diego Realty
             </Link>
-
-            {/* Hide name on small screens so it can't collide/overlap */}
-            <span className="hidden md:block mt-1 text-xs uppercase tracking-[0.15em] text-neutral-500 whitespace-nowrap">
+            <span className="hidden sm:block mt-1 text-xs uppercase tracking-[0.15em] text-neutral-500 whitespace-nowrap">
               Noah Windham
             </span>
           </div>
 
-          {/* CENTER: Links (wraps nicely on desktop, never shows on mobile) */}
-          <nav className="hidden md:flex justify-center">
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+          {/* CENTER: Desktop Links (ONLY on lg+ so it never wraps into a mess) */}
+          <nav className="hidden lg:flex items-center justify-center flex-1 px-10">
+            <div className="flex items-center gap-8 text-sm whitespace-nowrap">
               {links.map((l) => {
                 const active = pathname === l.href;
                 return (
                   <Link
                     key={l.href}
                     href={l.href}
-                    className={`whitespace-nowrap transition ${
+                    className={`transition ${
                       active
                         ? "text-black"
                         : "text-neutral-700 hover:text-black"
@@ -65,20 +64,21 @@ export default function Nav() {
             </div>
           </nav>
 
-          {/* RIGHT: CTA + Mobile menu */}
-          <div className="flex items-center justify-end gap-3">
+          {/* RIGHT: CTA + Mobile Menu */}
+          <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden md:inline-flex rounded-2xl border border-black bg-black px-5 py-3 text-sm text-white transition hover:bg-white hover:text-black"
+              className="hidden lg:inline-flex rounded-2xl border border-black bg-black px-5 py-3 text-sm text-white transition hover:bg-white hover:text-black"
             >
               Work with Noah
             </Link>
 
+            {/* Hamburger shows on <lg */}
             <button
               type="button"
               aria-label="Menu"
               aria-expanded={open}
-              className="md:hidden inline-flex items-center justify-center p-2 rounded-full border border-neutral-300"
+              className="lg:hidden inline-flex items-center justify-center p-2 rounded-full border border-neutral-300"
               onClick={() => setOpen((v) => !v)}
             >
               ☰
@@ -87,9 +87,9 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* MOBILE DROPDOWN */}
+      {/* MOBILE / TABLET DROPDOWN (used for everything <lg) */}
       {open && (
-        <div className="md:hidden border-t border-neutral-200/60 bg-white">
+        <div className="lg:hidden border-t border-neutral-200/60 bg-white">
           <div className="container py-3 grid gap-2 text-sm">
             {links.map((l) => (
               <Link
@@ -104,6 +104,7 @@ export default function Nav() {
                 {l.label}
               </Link>
             ))}
+
             <Link
               href="/contact"
               className="mt-2 inline-flex justify-center rounded-2xl border border-black bg-black px-5 py-3 text-sm text-white"
