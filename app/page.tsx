@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <main>
       {/* HERO */}
-      <section className="page-section pt-4 md:pt-6">
+      <section className="page-section pt-3 md:pt-5">
         <div className="container grid md:grid-cols-2 gap-10 items-center">
           <div>
             <span className="pill">
