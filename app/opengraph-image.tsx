@@ -45,7 +45,7 @@ export default function OGImage() {
                 'ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial',
             }}
           >
-            Noah Windham · CA DRE #02227646 · R B Haley Inc CA DRE #01843189
+            Noah Windham · CA DRE #02227646 · PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306
           </div>
         </div>
       </div>

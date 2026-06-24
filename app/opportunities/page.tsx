@@ -114,7 +114,7 @@ const caseStudies: CaseStudy[] = [
     title: "Trust sale: pricing rationale built for scrutiny",
     lane: "Trust / Estate",
     situation:
-      "Trustee needed an evidence-based pricing story and disciplined marketing—no guessing.",
+      "Trustee needed an evidence-based pricing story and disciplined marketing. No guessing.",
     result:
       "Comp-backed valuation, buyer psychology positioning, and disciplined negotiation strategy.",
     whyItMattered:
@@ -133,7 +133,7 @@ const caseStudies: CaseStudy[] = [
     result:
       "Tight contingencies, strong EMD posture, and clean comms from list to close.",
     whyItMattered:
-      "The win wasn’t just price—it was certainty and clean execution.",
+      "The win wasn’t just price. It was certainty and clean execution.",
     metrics: [
       { label: "Contingencies", value: "Tight" },
       { label: "Timeline", value: "Defined" },
@@ -271,7 +271,7 @@ export default function OpportunitiesPage() {
               <h2 className="brand-serif text-3xl">Execution case studies</h2>
               <p className="mt-2 text-neutral-600 max-w-prose">
                 Written for trustees, executors, and investors who care about process, risk,
-                and the quality of the file—not just the headline price.
+                and the quality of the file, not just the headline price.
               </p>
             </div>
 
@@ -341,7 +341,7 @@ export default function OpportunitiesPage() {
               Clarity, discipline, and a clean file.
             </h2>
             <p className="mt-3 text-neutral-600 max-w-prose">
-              If you’re signing as a trustee or executor, you’re managing risk—not just
+              If you’re signing as a trustee or executor, you’re managing risk, not just
               selling a house. Investors get the same standard, just faster.
             </p>
 

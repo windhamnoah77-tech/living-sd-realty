@@ -58,7 +58,7 @@ const trustSteps: Step[] = [
     bullets: [
       "Minimal-scope plan (clean-up, safety, curb appeal)",
       "Vendor coordination (when appropriate)",
-      "No ‘HGTV’ chaos — ROI-driven only",
+      "No ‘HGTV’ chaos. ROI-driven only",
     ],
   },
   {

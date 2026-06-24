@@ -36,10 +36,6 @@ export const metadata: Metadata = {
   verification: {
     google: "J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM",
   },
-  icons: {
-    icon: "/icon.png",
-    apple: "/apple-icon.png",
-  },
   openGraph: {
     title: "Living San Diego Realty | Noah Windham",
     description:

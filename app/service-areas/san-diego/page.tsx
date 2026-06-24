@@ -28,11 +28,11 @@ export default function SanDiegoAreas() {
           <span className="pill">San Diego · Trust & Estate · Investors</span>
 
           <h1 className="mt-5 text-4xl md:text-5xl leading-tight brand-serif">
-            San Diego trust &amp; estate real estate — executed cleanly.
+            San Diego trust &amp; estate real estate. Executed cleanly.
           </h1>
 
           <p className="mt-4 text-neutral-600 max-w-prose">
-            If you’re a trustee or executor, the goal isn’t hype—it’s a defensible plan:
+            If you’re a trustee or executor, the goal isn’t hype. It’s a defensible plan:
             valuation logic, disciplined disclosures, clean negotiation, and a file that
             stays organized from listing to close. Investors get the same standard:
             conservative underwriting and clean terms.
@@ -54,7 +54,7 @@ export default function SanDiegoAreas() {
           <div className="card p-7">
             <h2 className="brand-serif text-2xl">Common neighborhoods</h2>
             <p className="mt-3 text-sm text-neutral-600">
-              Not limited to these—this is just where the work most commonly lands.
+              Not limited to these. This is just where the work most commonly lands.
             </p>
 
             <ul className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-sm text-neutral-700">

@@ -30,7 +30,7 @@ const howIWork: Box[] = [
   {
     title: "Criteria first. No noise.",
     body:
-      "You give me a buy box. I send curated opportunities that actually match—MLS and off-market—without flooding you.",
+      "You give me a buy box. I send curated opportunities that actually match: MLS and off-market, without flooding you.",
     bullets: [
       "Asset type + neighborhoods + budget + timeline",
       "Non-negotiables (tenancy, condition, title, etc.)",
@@ -86,7 +86,7 @@ export default function InvestorsPage() {
 
             <p className="mt-4 text-neutral-600 max-w-prose">
               I work with serious investors who care about the numbers and the
-              process—not retail noise. You send your buy box and I source and
+              process. Not retail noise. You send your buy box and I source and
               structure opportunities (on-market and off-market) with conservative
               underwriting and clean terms.
             </p>
@@ -108,7 +108,7 @@ export default function InvestorsPage() {
 
             <div className="mt-5 text-xs text-neutral-500 space-y-1">
               <div>
-                Noah Windham · CA DRE #02227646 · Brokered by R B Haley Inc · CA DRE #01843189
+                Noah Windham · CA DRE #02227646 · Brokered by PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306
               </div>
               <div>San Diego focus · Bay Area & Los Angeles by request.</div>
             </div>
@@ -252,7 +252,7 @@ export default function InvestorsPage() {
             <div className="card p-7">
               <div className="brand-serif text-xl">Do you do off-market?</div>
               <p className="mt-3 text-sm text-neutral-600">
-                Yes—when it matches your criteria and the numbers justify it. If the deal
+                Yes, when it matches your criteria and the numbers justify it. If the deal
                 doesn’t pencil, I’ll tell you quickly.
               </p>
             </div>

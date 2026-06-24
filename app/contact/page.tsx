@@ -46,7 +46,7 @@ export default function ContactPage() {
   }
 
   // Update these to your actual backup contacts
-  const emailPrimary = "Noah@rbhaley.com";
+  const emailPrimary = "Noahw@PorchLightSoCal.com";
   const phonePrimary = "(707) 305-6499";
   const phoneBackup = "(619) 997-0178"; // change this
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
             <p className="mt-4 text-neutral-700 max-w-prose">
               If you’re a trustee/executor, you’re making a fiduciary decision.
               My job is to give you a defensible plan: pricing logic, timeline,
-              and next steps—without the usual agent noise.
+              and next steps, without the usual agent noise.
             </p>
 
             <div className="mt-6 grid sm:grid-cols-2 gap-4 text-sm">

@@ -124,7 +124,7 @@ export default function ContactFormClient() {
       )}
       {status === "error" && (
         <div className="mt-3 text-xs text-red-600">
-          Submit failed. Email me at Noah@rbhaley.com.
+          Submit failed. Email me at Noahw@PorchLightSoCal.com.
         </div>
       )}
 

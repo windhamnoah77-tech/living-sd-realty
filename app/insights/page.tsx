@@ -197,7 +197,7 @@ export default async function InsightsIndex({
               is not a standard retail sale. Trustees and executors need defensible
               valuation logic, disciplined disclosures, tight terms, and a clean file
               from listing to close. Investors need conservative underwriting, fast
-              execution, and a pipeline that’s filtered — not noisy.
+              execution, and a pipeline that’s filtered, not noisy.
             </p>
           </div>
         </div>

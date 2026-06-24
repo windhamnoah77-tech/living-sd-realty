@@ -16,7 +16,7 @@ export default function LosAngelesPage() {
           <span className="pill">Los Angeles · By Request · Trust & Estate · Investors</span>
 
           <h1 className="mt-5 text-4xl md:text-5xl leading-tight brand-serif">
-            Los Angeles — by request, with a clean execution standard.
+            Los Angeles, by request, with a clean execution standard.
           </h1>
 
           <p className="mt-4 text-neutral-600 max-w-prose">

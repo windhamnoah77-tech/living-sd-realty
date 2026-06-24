@@ -16,12 +16,12 @@ export default function BayAreaPage() {
           <span className="pill">Bay Area · By Request · Trust & Estate · Investors</span>
 
           <h1 className="mt-5 text-4xl md:text-5xl leading-tight brand-serif">
-            Bay Area work — by request, executed with the same discipline.
+            Bay Area work, by request, executed with the same discipline.
           </h1>
 
           <p className="mt-4 text-neutral-600 max-w-prose">
             If you have a trust/estate property or an investor need in the Bay, I handle it
-            by arrangement—especially for families managing multiple markets. The standard
+            by arrangement, especially for families managing multiple markets. The standard
             stays the same: defensible valuation logic, clean disclosures, tight terms,
             and organized execution.
           </p>

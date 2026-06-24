@@ -14,7 +14,7 @@ const areas = [
     href: "/service-areas/san-diego",
     bullets: ["North Park", "Mission Hills", "Point Loma", "La Jolla", "Clairemont", "Encinitas"],
     note:
-      "Home base. Most trust/estate work starts here—where execution and file discipline matter most.",
+      "Home base. Most trust/estate work starts here: where execution and file discipline matter most.",
   },
   {
     name: "Bay Area",
@@ -52,7 +52,7 @@ export default function ServiceAreasPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text:
-            "Yes, by arrangement. The key is confirming authority, timeline, occupancy constraints, and execution plan—then coordinating cleanly with the right local partners when needed.",
+            "Yes, by arrangement. The key is confirming authority, timeline, occupancy constraints, and execution plan. Then coordinating cleanly with the right local partners when needed.",
         },
       },
     ],
@@ -69,7 +69,7 @@ export default function ServiceAreasPage() {
           </h1>
 
           <p className="mt-4 text-neutral-600 max-w-prose">
-            Geography matters—but the bigger difference is execution. Trustees and executors
+            Geography matters. But the bigger difference is execution. Trustees and executors
             need defensible pricing, disciplined disclosures, and a clean file. Investors
             need conservative underwriting and fast, quiet closings. I keep the work tight
             across markets.

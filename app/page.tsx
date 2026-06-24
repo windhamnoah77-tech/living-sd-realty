@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export default function HomePage() {
             </span>
 
             <h1 className="mt-5 text-4xl md:text-5xl leading-tight brand-serif">
-              Trust & estate real estate—run like a fiduciary decision, not a retail listing.
+              Trust & estate real estate run like a fiduciary decision, not a retail listing.
             </h1>
 
             <p className="mt-4 text-neutral-600 max-w-prose">
@@ -68,7 +69,7 @@ export default function HomePage() {
 
             <div className="mt-5 text-xs text-neutral-500 space-y-1">
               <div>
-                Noah Windham · CA DRE #02227646 · Brokered by R B Haley Inc · CA DRE #01843189
+                Noah Windham · CA DRE #02227646 · Brokered by PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306
               </div>
               <div>San Diego base · Bay Area & Los Angeles by request.</div>
             </div>
@@ -106,13 +107,25 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* IMAGE: Hero banner */}
+      <div className="container -mt-2 mb-2">
+        <Image
+          src="/images/placeholder-1.jpg"
+          alt="San Diego trust and estate property sale, coastal home exterior"
+          width={1200}
+          height={600}
+          className="w-full rounded-2xl object-cover max-h-[480px]"
+          priority
+        />
+      </div>
+
       {/* VALUE PROPS */}
       <section className="page-section pt-0">
         <div className="container grid md:grid-cols-3 gap-6">
           <div className="card p-6">
             <div className="brand-serif text-lg">Pricing you can defend.</div>
             <p className="mt-2 text-sm text-neutral-600">
-              Comps, absorption, and risk framing—so your pricing rationale is clear and documented.
+              Comps, absorption, and risk framing: your pricing rationale is clear and documented.
             </p>
           </div>
 
@@ -126,7 +139,7 @@ export default function HomePage() {
           <div className="card p-6">
             <div className="brand-serif text-lg">Quiet leverage in negotiations.</div>
             <p className="mt-2 text-sm text-neutral-600">
-              Clean terms, tight timelines, and structured offer strategy—less drama, more control.
+              Clean terms, tight timelines, and structured offer strategy: less drama, more control.
             </p>
           </div>
         </div>
@@ -162,7 +175,7 @@ export default function HomePage() {
                 <li>Representation for trustees, executors, and families in trust & estate property sales</li>
                 <li>Coordination with attorneys and CPAs where appropriate (you stay in control)</li>
                 <li>Clear valuation rationale: comps + market dynamics + risk framing</li>
-                <li>Disciplined disclosures, timelines, and terms—clean file, clean close</li>
+                <li>Disciplined disclosures, timelines, and terms: clean file, clean close</li>
               </ul>
             </div>
 
@@ -227,6 +240,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* IMAGE: Case studies */}
+      <div className="container -mt-2 mb-2">
+        <Image
+          src="/images/placeholder-2.jpg"
+          alt="Trust and estate real estate case study, San Diego property"
+          width={1200}
+          height={600}
+          className="w-full rounded-2xl object-cover max-h-[420px]"
+        />
+      </div>
+
       {/* OUTCOMES */}
       <section className="page-section">
         <div className="container">
@@ -234,7 +258,7 @@ export default function HomePage() {
             <div>
               <h2 className="brand-serif text-3xl">Outcomes and execution.</h2>
               <p className="mt-2 text-neutral-600 max-w-prose">
-                Case studies and curated opportunities—built for trustees, executors,
+                Case studies and curated opportunities: built for trustees, executors,
                 families, and investors who care about the numbers and the process.
               </p>
             </div>
@@ -324,7 +348,7 @@ export default function HomePage() {
             </h2>
 
             <p className="mt-3 text-neutral-600 max-w-prose">
-              Most of my work starts in San Diego—especially trust and estate sales
+              Most of my work starts in San Diego, especially trust and estate sales
               where clean execution matters. I also collaborate across California for
               families and investors with multi-market needs.
             </p>
@@ -362,7 +386,7 @@ export default function HomePage() {
                   Do you only represent investors in trust sales?
                 </div>
                 <p className="mt-2 text-sm text-neutral-600">
-                  No. I represent investors both inside and outside of trust/estate situations—on-market and off-market.
+                  No. I represent investors both inside and outside of trust/estate situations, on-market and off-market.
                 </p>
               </div>
 
@@ -371,7 +395,7 @@ export default function HomePage() {
                   What matters most for trustees/executors?
                 </div>
                 <p className="mt-2 text-sm text-neutral-600">
-                  A defensible valuation, a disciplined timeline, and a clean paper trail—so decisions hold up later.
+                  A defensible valuation, a disciplined timeline, and a clean paper trail: decisions hold up later.
                 </p>
               </div>
 
@@ -380,7 +404,7 @@ export default function HomePage() {
                   Do you work with attorneys or CPAs?
                 </div>
                 <p className="mt-2 text-sm text-neutral-600">
-                  Yes—when appropriate. Coordination is handled professionally, and you remain the decision-maker.
+                  Yes, when appropriate. Coordination is handled professionally, and you remain the decision-maker.
                 </p>
               </div>
 
@@ -405,7 +429,16 @@ export default function HomePage() {
 
       {/* FINAL CTA */}
       <section className="page-section">
-        <div className="container grid md:grid-cols-2 gap-6 items-start">
+        <div className="container grid md:grid-cols-3 gap-6 items-start">
+          <Image
+            src="/images/placeholder-3.jpg"
+            alt="Schedule a consultation with Noah Windham, San Diego trust and estate realtor"
+            width={400}
+            height={400}
+            className="rounded-2xl object-cover w-full aspect-square"
+            style={{ objectPosition: "center 0%" }}
+          />
+
           <div className="card p-7">
             <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
               Positioning (for Google + humans)
@@ -413,7 +446,7 @@ export default function HomePage() {
             <p className="mt-4 text-neutral-700">
               Trust & estate real estate in San Diego isn’t a normal sale. Trustees
               and executors need defensible pricing, clean disclosures, disciplined
-              timelines, and experienced negotiation—so decisions stand up later.
+              timelines, and experienced negotiation: decisions stand up later.
             </p>
             <p className="mt-3 text-neutral-700">
               Investors get the same standard: clear underwriting assumptions, clean terms,
@@ -425,16 +458,13 @@ export default function HomePage() {
             <div className="text-xs uppercase tracking-[0.2em] text-neutral-300">
               Start with a clean plan
             </div>
-
             <h2 className="mt-3 brand-serif text-3xl">
               Trustee or executor? Let’s make this simple.
             </h2>
-
             <p className="mt-3 text-neutral-200">
               One short call. Clear valuation logic. A disciplined timeline. And a file
               that stays clean from listing to close.
             </p>
-
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/contact"
@@ -449,7 +479,6 @@ export default function HomePage() {
                 View the process
               </Link>
             </div>
-
             <div className="mt-4 text-xs text-neutral-300">
               Direct reply from Noah. No automated drip.
             </div>

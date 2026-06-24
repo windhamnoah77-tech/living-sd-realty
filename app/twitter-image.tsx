@@ -60,7 +60,7 @@ export default function TwitterImage() {
               color: "rgba(255,255,255,0.72)",
             }}
           >
-         Noah Windham·CA DRE #02227646·R B Haley Inc·CA DRE #01843189
+         Noah Windham·CA DRE #02227646·PorchLight Realty·eXp Realty of Southern California·CA DRE #02187306
           </div>
         </div>
       </div>

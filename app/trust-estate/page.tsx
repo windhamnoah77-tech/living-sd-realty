@@ -39,7 +39,7 @@ const steps = [
   {
     k: "04",
     title: "Launch + controlled marketing",
-    body: "Professional media + copy that presents the asset like an asset—without turning your trust sale into a circus.",
+    body: "Professional media + copy that presents the asset like an asset. No circus.",
   },
   {
     k: "05",
@@ -51,7 +51,7 @@ const steps = [
 const faqs = [
   {
     q: "Do I need probate to sell?",
-    a: "Sometimes yes, sometimes no—depends on title, the trust, and the estate plan. I’m not a lawyer, but I coordinate with your attorney so the sale aligns with your authority and the required process.",
+    a: "Sometimes yes, sometimes no: depends on title, the trust, and the estate plan. I’m not a lawyer, but I coordinate with your attorney so the sale aligns with your authority and the required process.",
   },
   {
     q: "Can you sell the property as-is?",
@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     q: "Can you coordinate with the attorney and CPA?",
-    a: "Yes—where appropriate. Your attorney handles legal strategy; your CPA handles tax considerations; I run the real estate execution and keep the file organized.",
+    a: "Yes, where appropriate. Your attorney handles legal strategy; your CPA handles tax considerations; I run the real estate execution and keep the file organized.",
   },
   {
     q: "What if there are multiple heirs or disagreements?",
@@ -101,14 +101,14 @@ export default function TrustEstatePage() {
             <span className="pill">Trust & Estate · Trustees · Executors</span>
 
             <h1 className="mt-5 text-4xl md:text-5xl leading-tight brand-serif">
-              Trust &amp; estate real estate in San Diego—built for fiduciary-level
+              Trust &amp; estate real estate in San Diego: built for fiduciary-level
               decisions.
             </h1>
 
             <p className="mt-4 text-neutral-600 max-w-prose">
               Trustees and executors don’t need hype. You need a defensible price,
               disciplined marketing, clean disclosures, and a process that stays
-              organized from listing to close—so the decision holds up later.
+              organized from listing to close: the decision holds up later.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
@@ -128,8 +128,7 @@ export default function TrustEstatePage() {
 
             <div className="mt-5 text-xs text-neutral-500 space-y-1">
               <div>
-                Noah Windham · CA DRE #02227646 · Brokered by R B Haley Inc · CA
-                DRE #01843189
+                Noah Windham · CA DRE #02227646 · Brokered by PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306
               </div>
               <div>San Diego base · Bay Area & Los Angeles by request.</div>
             </div>
@@ -170,7 +169,7 @@ export default function TrustEstatePage() {
           <div className="card p-6">
             <div className="brand-serif text-lg">Defensible pricing.</div>
             <p className="mt-2 text-sm text-neutral-600">
-              Comps + market dynamics + risk framing—built for scrutiny, not
+              Comps + market dynamics + risk framing: built for scrutiny, not
               salesy optimism.
             </p>
           </div>
@@ -206,7 +205,7 @@ export default function TrustEstatePage() {
                 <h2 className="brand-serif text-3xl">If you’re signing as the fiduciary.</h2>
                 <p className="mt-3 text-neutral-600 max-w-prose">
                   Trustees and executors carry responsibility. The work needs to be
-                  organized, defensible, and calm—even when the situation isn’t.
+                  organized, defensible, and calm, even when the situation isn’t.
                 </p>
 
                 <div className="mt-5 flex gap-4 text-sm">

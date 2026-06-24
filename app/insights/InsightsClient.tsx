@@ -47,7 +47,7 @@ const articles: Article[] = [
   {
     title: "Occupied inherited property: tenants, cash-for-keys, and clean options",
     excerpt:
-      "What trustees/executors can do when the property isn’t vacant — and how to keep the process ethical, lawful, and efficient.",
+      "What trustees/executors can do when the property isn’t vacant, and how to keep the process ethical, lawful, and efficient.",
     lane: "Trust & Estate",
     slug: "occupied-inherited-property-tenants-options",
     dateLabel: "Updated Dec 2025",

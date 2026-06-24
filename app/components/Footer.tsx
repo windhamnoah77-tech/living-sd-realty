@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="font-serif text-lg">Living San Diego Realty</div>
           <div className="text-neutral-600 mt-2">
             Noah Windham · CA DRE #02227646
-            <div>Brokered by R B Haley Inc · CA DRE #01843189</div>
+            <div>Brokered by PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306</div>
           </div>
           <div className="text-neutral-600 mt-2">
             San Diego · Bay Area · Los Angeles
@@ -52,8 +52,8 @@ export default function Footer() {
           <div className="font-medium">Contact</div>
           <div className="mt-2 space-y-1 text-neutral-600">
             <div>
-              <a className="underline" href="mailto:Noah@rbhaley.com">
-                Noah@rbhaley.com
+              <a className="underline" href="mailto:Noahw@PorchLightSoCal.com">
+                Noahw@PorchLightSoCal.com
               </a>
             </div>
             <div>
