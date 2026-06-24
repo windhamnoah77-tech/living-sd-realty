@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="font-serif text-lg">Living San Diego Realty</div>
           <div className="text-neutral-600 mt-2">
             Noah Windham · CA DRE #02227646
-            <div>Brokered by PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306</div>
+            <div>PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306</div>
           </div>
           <div className="text-neutral-600 mt-2">
             San Diego · Bay Area · Los Angeles

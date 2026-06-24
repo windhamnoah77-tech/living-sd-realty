@@ -108,7 +108,7 @@ export default function InvestorsPage() {
 
             <div className="mt-5 text-xs text-neutral-500 space-y-1">
               <div>
-                Noah Windham · CA DRE #02227646 · Brokered by PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306
+                Noah Windham · CA DRE #02227646 · PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306
               </div>
               <div>San Diego focus · Bay Area & Los Angeles by request.</div>
             </div>
