@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const links = [
+  { href: "/listing-options", label: "1% listing fee" },
   { href: "/trust-estate", label: "Trust & Estate" },
   { href: "/55-plus", label: "55+ Sellers" },
-  { href: "/listing-options", label: "Listing options" },
   { href: "/investors", label: "Investors" },
   { href: "/insights", label: "Insights" },
   { href: "/service-areas", label: "Service Areas" },

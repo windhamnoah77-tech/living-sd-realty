@@ -77,3 +77,6 @@ body {font-family:var(--font-geist-sans),Arial,sans-serif}
 .practice-fees {display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:3rem .3rem}
 .practice-fees p {color:#55555a;margin-top:.6rem}.practice-fees a {white-space:nowrap}
 @media(max-width:680px){.practice-services{grid-template-columns:1fr}.practice-fees{align-items:flex-start;flex-direction:column;gap:1rem}.practice-actions{gap:1rem}}
+
+.fee-number {color:#0066cc}
+.practice-hero .fee-terms {margin:1.2rem auto 0;max-width:39rem;font-size:.8rem;line-height:1.55;color:#56565b}
