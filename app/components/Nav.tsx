@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "/55-plus", label: "55+ Sellers" },
-  { href: "/listing-options", label: "Listing options" },
+  { href: "/listing-options", label: "1% listing fee" },
   { href: "/trust-estate", label: "Trust & Estate" },
+  { href: "/55-plus", label: "55+ Sellers" },
   { href: "/investors", label: "Investors" },
   { href: "/insights", label: "Insights" },
   { href: "/service-areas", label: "Service Areas" },
@@ -23,7 +23,7 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200/60 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-neutral-200/60 bg-white">
       <div className="container">
         <div className="flex items-center justify-between py-4">
           {/* LEFT: Brand */}
