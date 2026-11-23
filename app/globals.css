@@ -115,7 +115,6 @@ body {font-family:var(--font-geist-sans),Arial,sans-serif}
 .realty-home h1 em {font-style:normal}
 .realty-home h2 {font-weight:530;font-size:clamp(1.75rem,2.7vw,2.4rem);letter-spacing:-.052em}
 .realty-visual {min-height:29rem;border-radius:1.2rem}
-.realty-home img {filter:grayscale(1)}
 .realty-primary {border-radius:2rem;background:#141414;padding:.85rem 1.3rem}
 .realty-link,.realty-specialties a,.realty-reading a,.realty-example-note a {text-decoration:underline;text-decoration-color:#999;text-underline-offset:.25em}
 .realty-example {background:white;color:#171717;border-block:1px solid #d3d3d3;border-radius:0;padding:1.55rem 0}
