@@ -3,25 +3,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { posts } from "../_posts";
 
-const sources: Record<string, string[][]> = {
-  "oaks-north-villas-comparable-sales": [
-    [
-      "July sale record",
-      "https://www.redfin.com/CA/San-Diego/12755-Camino-de-la-Breccia-92128/unit-87/home/4207919"
-    ],
-    [
-      "September sale record",
-      "https://www.redfin.com/CA/San-Diego/17877-Avenida-Cordillera-92128/home/4210056"
-    ]
-  ],
-  "ocean-hills-country-club-sale-timing": [
-    [
-      "Ocean Hills association overview",
-      "https://www.oceanhillscountryclub.com/about-us"
-    ]
-  ]
-};
-
 type Params = { slug?: string | string[] };
 
 function getPost(slugParam: Params["slug"]) {
@@ -214,7 +195,6 @@ export default async function InsightPage({
               </section>
             ) : null}
 
-            {sources[post.slug] && <p className="flex flex-wrap gap-4">{sources[post.slug].map(([label, url]) => <a key={url} className="underline" href={url}>{label}</a>)}</p>}
             {/* CTA */}
             <section className="card p-7 bg-neutral-900 text-white">
               <div className="text-xs uppercase tracking-[0.2em] text-neutral-300">
@@ -226,7 +206,8 @@ export default async function InsightPage({
               </h2>
 
               <p className="mt-3 text-neutral-200">
-                Compare the cost of selling or request a personal review of your property.
+                One short call. Clear valuation logic. Disciplined next steps. No
+                retail noise.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -238,10 +219,10 @@ export default async function InsightPage({
                 </Link>
 
                 <Link
-                  href="/listing-options"
+                  href="/insights"
                   className="px-5 py-3 rounded-2xl border border-white/40 text-white hover:border-white transition"
                 >
-                  Compare listing fees and proceeds
+                  Back to Insights
                 </Link>
               </div>
             </section>

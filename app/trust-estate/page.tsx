@@ -101,11 +101,14 @@ export default function TrustEstatePage() {
             <span className="pill">Trust & Estate · Trustees · Executors</span>
 
             <h1 className="mt-5 text-4xl md:text-5xl leading-tight brand-serif">
-              Selling a home held in trust or an estate.
+              Trust &amp; estate real estate in San Diego: built for fiduciary-level
+              decisions.
             </h1>
 
             <p className="mt-4 text-neutral-600 max-w-prose">
-              I help trustees and executors compare offers, document pricing decisions and coordinate the property sale with their advisers. When a home needs to be emptied, I can schedule estate-sale specialists, donation pickups and cleanout vendors around the family’s timeline.
+              Trustees and executors don’t need hype. You need a defensible price,
+              disciplined marketing, clean disclosures, and a process that stays
+              organized from listing to close: the decision holds up later.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
@@ -319,10 +322,10 @@ export default function TrustEstatePage() {
                 Schedule an intro call
               </Link>
               <Link
-                href="/insights/date-of-death-appraisal-san-diego"
+                href="/opportunities"
                 className="px-5 py-3 rounded-2xl border border-white/40 text-white hover:border-white transition"
               >
-                Read the date-of-death appraisal guide
+                View opportunities
               </Link>
             </div>
           </div>

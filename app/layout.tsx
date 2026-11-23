@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import SellerAnalytics from "./components/SellerAnalytics";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
@@ -33,14 +32,14 @@ export const metadata: Metadata = {
     template: "%s | Living San Diego Realty",
   },
   description:
-    "Trust and estate real estate, 55+ community home sales and seller representation in San Diego County with Noah Windham.",
+    "Trust & estate real estate representation for trustees, executors, and serious investors. Defensible pricing, disciplined marketing, and clean execution.",
   verification: {
     google: "J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM",
   },
   openGraph: {
     title: "Living San Diego Realty | Noah Windham",
     description:
-      "Trust and estate real estate, 55+ community home sales and seller representation in San Diego County with Noah Windham.",
+      "Trust & estate real estate representation for trustees, executors, and serious investors.",
     siteName: "Living San Diego Realty",
     type: "website",
     url: "https://livingsandiegorealty.com",
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Living San Diego Realty | Noah Windham",
     description:
-      "Trust and estate real estate, 55+ community home sales and seller representation in San Diego County with Noah Windham.",
+      "Trust & estate real estate representation for trustees, executors, and serious investors.",
     images: ["/opengraph-image"],
   },
   robots: {
@@ -87,13 +86,12 @@ export default function RootLayout({
           `}
         </Script>
 
-        <SellerAnalytics />
         <Nav />
 
         {/* Consistent spacing under sticky header */}
-        <div className="pt-6">
+        <main className="pt-6">
           {children}
-        </div>
+        </main>
 
         <Footer />
       </body>

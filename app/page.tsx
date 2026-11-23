@@ -1,90 +1,488 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
-const title = "Sell Your San Diego Home for a 1% Listing Fee";
-const description = "Noah Windham offers a 1% market-ready listing option in San Diego County, with additional services for trustees, estates and 55+ homeowners.";
-
 export const metadata: Metadata = {
-  title, description, alternates: { canonical: "/" },
-  openGraph: { title, description, url: "/" },
-  twitter: { title, description },
-};
-
-const professional = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://livingsandiegorealty.com/#noah-windham",
-  name: "Noah Windham",
-  jobTitle: "Real estate agent",
-  url: "https://livingsandiegorealty.com/",
-  telephone: "+1-707-305-6499",
-  email: "noah@blacklabelrealty.com",
-  image: "https://livingsandiegorealty.com/images/placeholder-3.jpg",
-  worksFor: {
-    "@type": "RealEstateAgent",
-    name: "Black Label Realty",
-    address: {
-      "@type": "PostalAddress", streetAddress: "2535 Camino del Rio S #325",
-      addressLocality: "San Diego", addressRegion: "CA", postalCode: "92108", addressCountry: "US",
-    },
+  title: "Trust & Estate Real Estate | Living San Diego Realty",
+  description:
+    "Trust & estate real estate representation for trustees, executors, and serious investors across San Diego, the Bay Area, and Los Angeles. Defensible pricing, disciplined marketing, clean execution.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Trust & Estate Real Estate | Living San Diego Realty",
+    description:
+      "Trust & estate real estate representation for trustees, executors, and serious investors across San Diego, the Bay Area, and Los Angeles. Defensible pricing, disciplined marketing, clean execution.",
+    url: "/",
+    type: "website",
+  },
+  twitter: {
+    title: "Trust & Estate Real Estate | Living San Diego Realty",
+    description:
+      "Trust & estate real estate representation for trustees, executors, and serious investors across San Diego, the Bay Area, and Los Angeles.",
   },
 };
 
+
 export default function HomePage() {
   return (
-    <main className="realty-home">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professional) }} />
-      <section className="realty-intro">
-        <div className="realty-copy">
-          <p className="realty-location">San Diego County</p>
-          <h1>Sell your home.<br /><em>1% listing fee.</em></h1>
-          <p className="realty-lead">For market-ready homes in San Diego County. I handle pricing, photography, MLS marketing, negotiation and escrow. You handle preparation, vendors and access.</p>
-          <div className="realty-actions">
-            <Link className="realty-primary" href="/listing-options#estimate">Get my selling estimate <span aria-hidden="true">↗</span></Link>
-            <Link className="realty-link" href="/listing-options">See what 1% includes</Link>
+    <main>
+      {/* HERO */}
+      <section className="page-section pt-3 md:pt-5">
+        <div className="container grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <span className="pill">
+              Trust & Estate · Trustees · Executors · Investors · On/Off-Market
+            </span>
+
+            <h1 className="mt-5 text-4xl md:text-5xl leading-tight brand-serif">
+              Trust & estate real estate run like a fiduciary decision, not a retail listing.
+            </h1>
+
+            <p className="mt-4 text-neutral-600 max-w-prose">
+              I represent trustees, executors, and families in trust and estate
+              property sales, and investors in both on- and off-market transactions
+              across San Diego, the Bay Area, and Los Angeles. Defensible valuation,
+              disciplined negotiation, and marketing built for high-stakes decisions.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="px-5 py-3 rounded-2xl border border-black bg-black text-white hover:bg-white hover:text-black transition"
+              >
+                Request pricing consult
+              </Link>
+
+              <Link
+                href="/trust-estate"
+                className="px-5 py-3 rounded-2xl border border-neutral-300 text-neutral-800 hover:border-black transition"
+              >
+                Trust & estate services
+              </Link>
+
+              <Link
+                href="/opportunities"
+                className="px-5 py-3 rounded-2xl border border-neutral-300 text-neutral-800 hover:border-black transition"
+              >
+                Opportunities + case studies
+              </Link>
+            </div>
+
+            <div className="mt-5 text-xs text-neutral-500 space-y-1">
+              <div>
+                Noah Windham · CA DRE #02227646 · Black Label Realty · CA DRE #02254507
+              </div>
+              <div>San Diego base · Bay Area & Los Angeles by request.</div>
+            </div>
           </div>
-          <p className="realty-credit">Noah Windham · Black Label Realty<br />CA DRE #02227646 · Broker DRE #02254507</p>
-        </div>
-        <div className="realty-visual">
-          <Image src="/images/placeholder-1.jpg" alt="White coastal home framed by palm trees" fill priority sizes="(max-width: 760px) 95vw, (max-width: 1250px) 49vw, 600px" />
+
+          <div className="card p-6 md:p-8 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white">
+            <div className="text-xs uppercase tracking-[0.2em] text-neutral-300">
+              Fiduciary-level execution
+            </div>
+
+            <div className="mt-3 brand-serif text-2xl">
+              When you’re signing as a trustee or executor, your decision needs to hold up later.
+            </div>
+
+            <p className="mt-3 text-sm text-neutral-200">
+              My job is to make your sale defensible: clear valuation logic, clean marketing,
+              tight terms, and a file that stays organized from listing to close.
+            </p>
+
+            <div className="mt-5 grid grid-cols-2 gap-3 text-xs">
+              <div className="rounded-xl border border-white/15 p-3">
+                <div className="text-neutral-300">Primary lane</div>
+                <div className="text-base font-semibold">Trust & Estate</div>
+              </div>
+              <div className="rounded-xl border border-white/15 p-3">
+                <div className="text-neutral-300">Second lane</div>
+                <div className="text-base font-semibold">Investors</div>
+              </div>
+            </div>
+
+            <div className="mt-4 text-xs text-neutral-300">
+              Clean disclosures · disciplined timelines · direct communication
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="realty-example" aria-label="Example listing fee">
-        <div><span>Example sale price</span><strong>$1,000,000</strong></div>
-        <div><span>1% listing-side fee</span><strong>$10,000</strong></div>
-        <div className="realty-example-note"><p>Fees are negotiable. Buyer-agent compensation and closing costs are separate.</p>
-          <Link href="/listing-options#calculator">Calculate your proceeds <span aria-hidden="true">→</span></Link></div>
-      </section>
+      {/* IMAGE: Hero banner */}
+      <div className="container -mt-2 mb-2">
+        <Image
+          src="/images/placeholder-1.jpg"
+          alt="San Diego trust and estate property sale, coastal home exterior"
+          width={1200}
+          height={600}
+          className="w-full rounded-2xl object-cover max-h-[480px]"
+          priority
+        />
+      </div>
 
-      <section className="realty-specialties" aria-label="Specialized seller services">
-        <div className="realty-interior"><Image src="/images/placeholder-2.jpg" alt="Light-filled living room with a stone fireplace" fill sizes="(max-width: 760px) 95vw, 520px" /></div>
-        <div className="realty-specialty-copy">
-        <article><h2>Trust &amp; estate sales</h2>
-          <p>If you’re handling a family property, I can prepare a valuation, coordinate an estate sale or cleanout, and organize the sale around your family and advisers.</p>
-          <Link href="/trust-estate">Selling as a trustee or executor <span aria-hidden="true">→</span></Link>
-        </article>
-        <article><h2>55+ community sales</h2>
-          <p>Find out what homes like yours have sold for, which improvements are worth doing, and how to time your sale around your next move anywhere in San Diego County.</p>
-          <Link href="/55-plus">Selling in a 55+ community <span aria-hidden="true">→</span></Link>
-        </article>
+      {/* VALUE PROPS */}
+      <section className="page-section pt-0">
+        <div className="container grid md:grid-cols-3 gap-6">
+          <div className="card p-6">
+            <div className="brand-serif text-lg">Pricing you can defend.</div>
+            <p className="mt-2 text-sm text-neutral-600">
+              Comps, absorption, and risk framing: your pricing rationale is clear and documented.
+            </p>
+          </div>
+
+          <div className="card p-6">
+            <div className="brand-serif text-lg">Marketing that matches the asset.</div>
+            <p className="mt-2 text-sm text-neutral-600">
+              Photography, film, and copy that elevate the property without turning the sale into noise.
+            </p>
+          </div>
+
+          <div className="card p-6">
+            <div className="brand-serif text-lg">Quiet leverage in negotiations.</div>
+            <p className="mt-2 text-sm text-neutral-600">
+              Clean terms, tight timelines, and structured offer strategy: less drama, more control.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="realty-reading">
-        <div><h2>Before you list</h2><p>Local sales and practical numbers for your next decision.</p></div>
-        <ul>
-          <li><Link href="/insights/san-diego-million-dollar-sale-proceeds">What would you keep on a $1 million San Diego sale? <span aria-hidden="true">↗</span></Link></li>
-          <li><Link href="/insights/oaks-north-villas-comparable-sales">What two Oaks North Villas sales tell a seller <span aria-hidden="true">↗</span></Link></li>
-          <li><Link href="/insights/ocean-hills-country-club-sale-timing">Planning an Ocean Hills Country Club sale <span aria-hidden="true">↗</span></Link></li>
-        </ul>
+      {/* TRUST SIGNALS */}
+      <section className="page-section bg-neutral-50">
+        <div className="container">
+          <div className="card p-8 md:p-10">
+            <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+              Trusted for fiduciary-level decisions
+            </div>
+
+            <div className="mt-3 grid md:grid-cols-2 gap-8 items-start">
+              <div>
+                <h2 className="brand-serif text-3xl">Clarity, not chaos.</h2>
+                <p className="mt-3 text-neutral-600 max-w-prose">
+                  Trustees and executors don’t need hype. They need a clean rationale,
+                  clean terms, and a clean paper trail.
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                  <Link className="underline" href="/process">
+                    How the process works
+                  </Link>
+                  <Link className="underline" href="/contact">
+                    Schedule a call
+                  </Link>
+                </div>
+              </div>
+
+              <ul className="space-y-3 text-sm text-neutral-700">
+                <li>Representation for trustees, executors, and families in trust & estate property sales</li>
+                <li>Coordination with attorneys and CPAs where appropriate (you stay in control)</li>
+                <li>Clear valuation rationale: comps + market dynamics + risk framing</li>
+                <li>Disciplined disclosures, timelines, and terms: clean file, clean close</li>
+              </ul>
+            </div>
+
+            {/* Micro-proof */}
+            <div className="mt-8 grid md:grid-cols-3 gap-6">
+              <div className="card p-6 bg-white">
+                <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+                  Standard of work
+                </div>
+                <div className="mt-2 brand-serif text-lg">File discipline</div>
+                <p className="mt-2 text-sm text-neutral-600">
+                  Documentation and timelines handled with the assumption someone will ask questions later.
+                </p>
+              </div>
+
+              <div className="card p-6 bg-white">
+                <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+                  Communication
+                </div>
+                <div className="mt-2 brand-serif text-lg">Direct + calm</div>
+                <p className="mt-2 text-sm text-neutral-600">
+                  Short updates, clear choices, and no “agent theater.”
+                </p>
+              </div>
+
+              <div className="card p-6 bg-white">
+                <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+                  Negotiation
+                </div>
+                <div className="mt-2 brand-serif text-lg">Structured leverage</div>
+                <p className="mt-2 text-sm text-neutral-600">
+                  Tight contingencies, clean terms, and a strategy that protects the seller’s position.
+                </p>
+              </div>
+            </div>
+
+            {/* Testimonial placeholders (optional, but reads expensive) */}
+            <div className="mt-8 grid md:grid-cols-2 gap-6">
+              <div className="card p-6 bg-white">
+                <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+                  Trustee · San Diego
+                </div>
+                <p className="mt-3 text-sm text-neutral-700">
+                  “Clear numbers, clean timelines, and zero chaos. Exactly what we needed as a family.”
+                </p>
+              </div>
+
+              <div className="card p-6 bg-white">
+                <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+                  Investor · Off-market
+                </div>
+                <p className="mt-3 text-sm text-neutral-700">
+                  “Straight underwriting, straightforward terms, and fast execution.”
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-3 text-xs text-neutral-500">
+              Testimonials can be anonymized and used with permission.
+            </div>
+          </div>
+        </div>
       </section>
-      <section className="realty-adviser">
-        <Image src="/images/placeholder-3.jpg" alt="Noah Windham" width={144} height={180} sizes="144px" />
-        <div><h2>Noah Windham</h2><p>Black Label Realty · San Diego County</p>
-          <p>Tell me about the property and what you want the sale to accomplish. I’ll help you compare the numbers and decide how much of the work you want to hand off.</p>
-          <div className="realty-actions"><Link className="realty-primary" href="/contact">Talk with Noah</Link><a className="realty-link" href="tel:+17073056499">(707) 305-6499</a></div>
+
+      {/* IMAGE: Case studies */}
+      <div className="container -mt-2 mb-2">
+        <Image
+          src="/images/placeholder-2.jpg"
+          alt="Trust and estate real estate case study, San Diego property"
+          width={1200}
+          height={600}
+          className="w-full rounded-2xl object-cover max-h-[420px]"
+        />
+      </div>
+
+      {/* OUTCOMES */}
+      <section className="page-section">
+        <div className="container">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <h2 className="brand-serif text-3xl">Outcomes and execution.</h2>
+              <p className="mt-2 text-neutral-600 max-w-prose">
+                Case studies and curated opportunities: built for trustees, executors,
+                families, and investors who care about the numbers and the process.
+              </p>
+            </div>
+            <Link href="/opportunities" className="hidden md:inline-flex pill">
+              See opportunities
+            </Link>
+          </div>
+
+          <div className="mt-8 grid md:grid-cols-2 gap-6">
+            <div className="card p-7 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white">
+              <div className="text-xs uppercase tracking-[0.2em] text-neutral-300">
+                Case study · Trust sale
+              </div>
+              <div className="mt-3 brand-serif text-2xl">
+                Multiple heirs, deferred maintenance, clean close.
+              </div>
+              <p className="mt-3 text-sm text-neutral-200">
+                Prep and pricing strategy first. Then disciplined marketing and clean offer structure.
+                The goal: strong price, clean terms, and a file that stays organized end-to-end.
+              </p>
+              <div className="mt-5 grid grid-cols-3 gap-3 text-xs">
+                <div>
+                  <div className="text-neutral-300">Offers</div>
+                  <div className="text-base font-semibold">9</div>
+                </div>
+                <div>
+                  <div className="text-neutral-300">Over list</div>
+                  <div className="text-base font-semibold">+16%</div>
+                </div>
+                <div>
+                  <div className="text-neutral-300">Close</div>
+                  <div className="text-base font-semibold">30 days</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="card p-7">
+              <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+                Case study · Investor (on/off-market)
+              </div>
+              <div className="mt-3 brand-serif text-2xl">
+                Numbers first. Quiet execution.
+              </div>
+              <p className="mt-3 text-sm text-neutral-600">
+                Sourced and evaluated with conservative assumptions, negotiated clean terms,
+                and closed with minimal back-and-forth.
+              </p>
+
+              <div className="mt-5 grid grid-cols-3 gap-3 text-xs">
+                <div>
+                  <div className="text-neutral-500">Sourcing</div>
+                  <div className="text-base font-semibold">On/Off-market</div>
+                </div>
+                <div>
+                  <div className="text-neutral-500">Terms</div>
+                  <div className="text-base font-semibold">Clean</div>
+                </div>
+                <div>
+                  <div className="text-neutral-500">Timeline</div>
+                  <div className="text-base font-semibold">Fast</div>
+                </div>
+              </div>
+
+              <div className="mt-6 flex gap-4 text-sm">
+                <Link className="underline" href="/investors">
+                  Investor criteria
+                </Link>
+                <Link className="underline" href="/contact">
+                  Talk acquisition
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICE AREAS */}
+      <section className="page-section bg-neutral-50">
+        <div className="container">
+          <div className="card p-8 md:p-10">
+            <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+              Service areas
+            </div>
+
+            <h2 className="mt-3 brand-serif text-3xl">
+              San Diego first. Bay Area and Los Angeles by request.
+            </h2>
+
+            <p className="mt-3 text-neutral-600 max-w-prose">
+              Most of my work starts in San Diego, especially trust and estate sales
+              where clean execution matters. I also collaborate across California for
+              families and investors with multi-market needs.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-4 text-sm">
+              <Link className="underline" href="/service-areas">
+                Explore service areas
+              </Link>
+              <Link className="underline" href="/insights">
+                Read insights
+              </Link>
+              <Link className="underline" href="/contact">
+                Schedule a call
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO FAQ (high impact for ranking + conversion) */}
+      <section className="page-section">
+        <div className="container">
+          <div className="card p-8 md:p-10">
+            <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+              Quick answers
+            </div>
+
+            <h2 className="mt-3 brand-serif text-3xl">
+              Trust & estate sale FAQs
+            </h2>
+
+            <div className="mt-6 grid md:grid-cols-2 gap-6">
+              <div className="card p-6">
+                <div className="brand-serif text-lg">
+                  Do you only represent investors in trust sales?
+                </div>
+                <p className="mt-2 text-sm text-neutral-600">
+                  No. I represent investors both inside and outside of trust/estate situations, on-market and off-market.
+                </p>
+              </div>
+
+              <div className="card p-6">
+                <div className="brand-serif text-lg">
+                  What matters most for trustees/executors?
+                </div>
+                <p className="mt-2 text-sm text-neutral-600">
+                  A defensible valuation, a disciplined timeline, and a clean paper trail: decisions hold up later.
+                </p>
+              </div>
+
+              <div className="card p-6">
+                <div className="brand-serif text-lg">
+                  Do you work with attorneys or CPAs?
+                </div>
+                <p className="mt-2 text-sm text-neutral-600">
+                  Yes, when appropriate. Coordination is handled professionally, and you remain the decision-maker.
+                </p>
+              </div>
+
+              <div className="card p-6">
+                <div className="brand-serif text-lg">
+                  Can we sell quietly (without blasting the market)?
+                </div>
+                <p className="mt-2 text-sm text-neutral-600">
+                  Yes. Depending on your objectives, we can discuss quiet/off-market strategy versus a disciplined public launch.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 text-sm">
+              <Link className="underline" href="/trust-estate">
+                Read the full trust & estate playbook →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="page-section">
+        <div className="container grid md:grid-cols-3 gap-6 items-start">
+          <Image
+            src="/images/placeholder-3.jpg"
+            alt="Schedule a consultation with Noah Windham, San Diego trust and estate realtor"
+            width={400}
+            height={400}
+            className="rounded-2xl object-cover w-full aspect-square"
+            style={{ objectPosition: "center 0%" }}
+          />
+
+          <div className="card p-7">
+            <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+              Positioning (for Google + humans)
+            </div>
+            <p className="mt-4 text-neutral-700">
+              Trust & estate real estate in San Diego isn’t a normal sale. Trustees
+              and executors need defensible pricing, clean disclosures, disciplined
+              timelines, and experienced negotiation: decisions stand up later.
+            </p>
+            <p className="mt-3 text-neutral-700">
+              Investors get the same standard: clear underwriting assumptions, clean terms,
+              and fast execution.
+            </p>
+          </div>
+
+          <div className="card p-7 bg-neutral-900 text-white">
+            <div className="text-xs uppercase tracking-[0.2em] text-neutral-300">
+              Start with a clean plan
+            </div>
+            <h2 className="mt-3 brand-serif text-3xl">
+              Trustee or executor? Let’s make this simple.
+            </h2>
+            <p className="mt-3 text-neutral-200">
+              One short call. Clear valuation logic. A disciplined timeline. And a file
+              that stays clean from listing to close.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="px-5 py-3 rounded-2xl border border-white bg-white text-black hover:bg-neutral-900 hover:text-white transition"
+              >
+                Schedule an intro call
+              </Link>
+              <Link
+                href="/process"
+                className="px-5 py-3 rounded-2xl border border-white/40 text-white hover:border-white transition"
+              >
+                View the process
+              </Link>
+            </div>
+            <div className="mt-4 text-xs text-neutral-300">
+              Direct reply from Noah. No automated drip.
+            </div>
+          </div>
         </div>
       </section>
     </main>

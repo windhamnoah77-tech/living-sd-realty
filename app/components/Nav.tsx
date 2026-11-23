@@ -5,13 +5,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "/listing-options", label: "1% listing fee" },
+  { href: "/", label: "Home" },
+  { href: "/opportunities", label: "Opportunities" },
+  { href: "/process", label: "Process" },
   { href: "/trust-estate", label: "Trust & Estate" },
-  { href: "/55-plus", label: "55+ Sellers" },
   { href: "/investors", label: "Investors" },
   { href: "/insights", label: "Insights" },
   { href: "/service-areas", label: "Service Areas" },
-
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -23,7 +24,7 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200/60 bg-white">
+    <header className="sticky top-0 z-50 border-b border-neutral-200/60 bg-white/80 backdrop-blur">
       <div className="container">
         <div className="flex items-center justify-between py-4">
           {/* LEFT: Brand */}
