@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { communityPages } from "./lib/communities";
 
 // No trailing slash
 const SITE_URL =
@@ -49,11 +50,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/`, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
 
     { url: `${SITE_URL}/trust-estate`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/listing-fees`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/55-plus-communities`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    ...communityPages.map((c) => ({
+      url: `${SITE_URL}/55-plus-communities/${c.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     { url: `${SITE_URL}/investors`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
 
     { url: `${SITE_URL}/process`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/opportunities`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/service-areas`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_URL}/service-areas/san-diego`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
 
     { url: `${SITE_URL}/insights`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
 

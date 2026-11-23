@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "../components/LeadTracking";
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
@@ -32,6 +33,10 @@ export default function ContactPage() {
         return;
       }
 
+      trackEvent("generate_lead", {
+        form: "contact",
+        role: String(payload.role ?? ""),
+      });
       setStatus("success");
       setStatusMsg(
         "Sent. You’ll get a direct reply from Noah with suggested next steps and times."
@@ -169,11 +174,14 @@ export default function ContactPage() {
               <select
                 name="role"
                 className="w-full rounded-2xl border border-neutral-300 px-4 py-3"
-                defaultValue="Trustee / executor (trust or estate sale)"
+                defaultValue="Selling a home"
               >
+                <option>Selling a home</option>
                 <option>Trustee / executor (trust or estate sale)</option>
+                <option>Family / heir (inherited home)</option>
+                <option>Selling in a 55+ community</option>
+                <option>Interested in the 1% listing</option>
                 <option>Investor</option>
-                <option>Seller</option>
                 <option>Buyer</option>
                 <option>Other</option>
               </select>
@@ -188,7 +196,7 @@ export default function ContactPage() {
                 <select
                   name="priceRange"
                   className="w-full rounded-2xl border border-neutral-300 px-4 py-3"
-                  defaultValue="Unknown / TBF"
+                  defaultValue="Property value"
                 >
                   <option>Property value</option>
                   <option>$0–$750k</option>

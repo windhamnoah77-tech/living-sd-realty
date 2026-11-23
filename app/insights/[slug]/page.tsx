@@ -112,7 +112,24 @@ export default async function InsightPage({
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              post.faq?.length
+                ? [
+                    jsonLd,
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      mainEntity: post.faq.map((f) => ({
+                        "@type": "Question",
+                        name: f.q,
+                        acceptedAnswer: { "@type": "Answer", text: f.a },
+                      })),
+                    },
+                  ]
+                : jsonLd
+            ),
+          }}
         />
       </section>
 
@@ -202,12 +219,12 @@ export default async function InsightPage({
               </div>
 
               <h2 className="mt-3 brand-serif text-3xl">
-                Want a clean plan for your specific situation?
+                What would your home sell for?
               </h2>
 
               <p className="mt-3 text-neutral-200">
-                One short call. Clear valuation logic. Disciplined next steps. No
-                retail noise.
+                Send the address and Noah will reply with a price range, recent sales
+                nearby and a plan for your situation. Full-service listings start at 1%.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -215,14 +232,21 @@ export default async function InsightPage({
                   href="/contact"
                   className="px-5 py-3 rounded-2xl border border-white bg-white text-black hover:bg-neutral-900 hover:text-white transition"
                 >
-                  Schedule an intro call
+                  Get my home&apos;s value
+                </Link>
+
+                <Link
+                  href="/listing-fees"
+                  className="px-5 py-3 rounded-2xl border border-white/40 text-white hover:border-white transition"
+                >
+                  See listing options
                 </Link>
 
                 <Link
                   href="/insights"
                   className="px-5 py-3 rounded-2xl border border-white/40 text-white hover:border-white transition"
                 >
-                  Back to Insights
+                  All seller guides
                 </Link>
               </div>
             </section>
