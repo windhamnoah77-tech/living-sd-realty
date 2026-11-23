@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-const title = "1% Listing Fee in San Diego County | Noah Windham";
-const description = "Sell a market-ready home in San Diego County with a 1% listing-side option. Compare services with Noah Windham, including trust sales and 55+ communities.";
+const title = "Sell Your San Diego Home for a 1% Listing Fee";
+const description = "Noah Windham offers a 1% market-ready listing option in San Diego County, with additional services for trustees, estates and 55+ homeowners.";
 
 export const metadata: Metadata = {
   title, description, alternates: { canonical: "/" },
@@ -12,34 +13,58 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="practice-home">
-      <header className="practice-hero">
-        <p className="practice-location">Noah Windham · San Diego County</p>
-        <h1><span className="fee-number">1%</span> listing fee.</h1>
-        <p className="practice-summary">On a $1 million sale, that’s $10,000 for listing representation. I handle pricing, photography, MLS marketing, negotiations and escrow. You handle preparation, vendors and access.</p>
-        <div className="practice-actions">
-          <Link className="practice-primary" href="/listing-options#estimate">Ask Noah about listing for 1%</Link>
-          <Link href="/listing-options#calculator">Compare fees and proceeds <span aria-hidden="true">›</span></Link>
+    <main className="realty-home">
+      <section className="realty-intro">
+        <div className="realty-copy">
+          <p className="realty-location">San Diego County</p>
+          <h1>Sell your home.<br /><em>1% listing fee.</em></h1>
+          <p className="realty-lead">For market-ready homes in San Diego County. I handle pricing, photography, MLS marketing, negotiation and escrow. You handle preparation, vendors and access.</p>
+          <div className="realty-actions">
+            <Link className="realty-primary" href="/listing-options#estimate">Get my selling estimate <span aria-hidden="true">↗</span></Link>
+            <Link className="realty-link" href="/listing-options">See what 1% includes</Link>
+          </div>
+          <p className="realty-credit">Noah Windham · Black Label Realty<br />CA DRE #02227646 · Broker DRE #02254507</p>
         </div>
-        <p className="fee-terms">Market-ready option. Listing fees are negotiable. Any buyer-agent compensation is separate.</p>
-      </header>
+        <div className="realty-visual">
+          <Image src="/images/placeholder-1.jpg" alt="White coastal home framed by palm trees" fill priority sizes="(max-width: 760px) 95vw, (max-width: 1250px) 49vw, 600px" />
+        </div>
+      </section>
 
-      <div className="practice-services">
-        <section className="practice-panel estate-panel">
-          <h2>Trust &amp; estate sales.</h2>
-          <p>Compare selling as-is with preparing the property. I coordinate local vendors, cleanouts and estate-sale appointments, and keep your authorized family members and advisers informed.</p>
-          <Link href="/trust-estate">For trustees and executors <span aria-hidden="true">›</span></Link>
-        </section>
-        <section className="practice-panel community-panel">
-          <h2>Selling in a 55+ community.</h2>
-          <p>If you own a home in a San Diego County 55+ community, start with recent sales for your floor plan and an estimate of what you could take into your next home.</p>
-          <Link href="/55-plus">For 55+ homeowners <span aria-hidden="true">›</span></Link>
-        </section>
-      </div>
+      <section className="realty-example" aria-label="Example listing fee">
+        <div><span>Example sale price</span><strong>$1,000,000</strong></div>
+        <div><span>1% listing-side fee</span><strong>$10,000</strong></div>
+        <div className="realty-example-note"><p>Fees are negotiable. Buyer-agent compensation and closing costs are separate.</p>
+          <Link href="/listing-options#calculator">Calculate your proceeds <span aria-hidden="true">→</span></Link></div>
+      </section>
 
-      <section className="practice-fees">
-        <div><h2>Want more handled for you?</h2><p>Compare the 2.5% managed sale and 3% sale-and-move options.</p></div>
-        <Link href="/listing-options">Compare options <span aria-hidden="true">›</span></Link>
+      <section className="realty-specialties" aria-label="Specialized seller services">
+        <div className="realty-interior"><Image src="/images/placeholder-2.jpg" alt="Light-filled living room with a stone fireplace" fill sizes="(max-width: 760px) 95vw, 520px" /></div>
+        <div className="realty-specialty-copy">
+        <article><h2>Trust &amp; estate sales</h2>
+          <p>If you’re handling a family property, I can prepare a valuation, coordinate an estate sale or cleanout, and organize the sale around your family and advisers.</p>
+          <Link href="/trust-estate">Selling as a trustee or executor <span aria-hidden="true">→</span></Link>
+        </article>
+        <article><h2>55+ community sales</h2>
+          <p>Find out what homes like yours have sold for, which improvements are worth doing, and how to time your sale around your next move anywhere in San Diego County.</p>
+          <Link href="/55-plus">Selling in a 55+ community <span aria-hidden="true">→</span></Link>
+        </article>
+        </div>
+      </section>
+
+      <section className="realty-reading">
+        <div><h2>Before you list</h2><p>Local sales and practical numbers for your next decision.</p></div>
+        <ul>
+          <li><Link href="/insights/san-diego-million-dollar-sale-proceeds">What would you keep on a $1 million San Diego sale? <span aria-hidden="true">↗</span></Link></li>
+          <li><Link href="/insights/oaks-north-villas-comparable-sales">What two Oaks North Villas sales tell a seller <span aria-hidden="true">↗</span></Link></li>
+          <li><Link href="/insights/ocean-hills-country-club-sale-timing">Planning an Ocean Hills Country Club sale <span aria-hidden="true">↗</span></Link></li>
+        </ul>
+      </section>
+      <section className="realty-adviser">
+        <Image src="/images/placeholder-3.jpg" alt="Noah Windham" width={144} height={180} sizes="144px" />
+        <div><h2>Noah Windham</h2><p>Black Label Realty · San Diego County</p>
+          <p>Tell me about the property and what you want the sale to accomplish. I’ll help you compare the numbers and decide how much of the work you want to hand off.</p>
+          <div className="realty-actions"><Link className="realty-primary" href="/contact">Talk with Noah</Link><a className="realty-link" href="tel:+17073056499">(707) 305-6499</a></div>
+        </div>
       </section>
     </main>
   );

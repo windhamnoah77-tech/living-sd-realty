@@ -17,7 +17,7 @@ const fields = [
 
 export default function Proceeds() {
   const [amounts, setAmounts] = useState({ price: "1000000", payoff: "", closing: "", prep: "", credits: "" });
-  const [rate, setRate] = useState(2.5);
+  const [rate, setRate] = useState(1);
   const valid = Number(amounts.price) > 0 && Object.values(amounts).every(value => Number.isFinite(Number(value)) && Number(value) >= 0);
   const price = Number(amounts.price);
   const fee = price * rate / 100;

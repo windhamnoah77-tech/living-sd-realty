@@ -319,10 +319,10 @@ export default function TrustEstatePage() {
                 Schedule an intro call
               </Link>
               <Link
-                href="/opportunities"
+                href="/insights/date-of-death-appraisal-san-diego"
                 className="px-5 py-3 rounded-2xl border border-white/40 text-white hover:border-white transition"
               >
-                View opportunities
+                Read the date-of-death appraisal guide
               </Link>
             </div>
           </div>
