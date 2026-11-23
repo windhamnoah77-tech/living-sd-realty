@@ -11,9 +11,30 @@ export const metadata: Metadata = {
   twitter: { title, description },
 };
 
+const professional = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://livingsandiegorealty.com/#noah-windham",
+  name: "Noah Windham",
+  jobTitle: "Real estate agent",
+  url: "https://livingsandiegorealty.com/",
+  telephone: "+1-707-305-6499",
+  email: "noah@blacklabelrealty.com",
+  image: "https://livingsandiegorealty.com/images/placeholder-3.jpg",
+  worksFor: {
+    "@type": "RealEstateAgent",
+    name: "Black Label Realty",
+    address: {
+      "@type": "PostalAddress", streetAddress: "2535 Camino del Rio S #325",
+      addressLocality: "San Diego", addressRegion: "CA", postalCode: "92108", addressCountry: "US",
+    },
+  },
+};
+
 export default function HomePage() {
   return (
     <main className="realty-home">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professional) }} />
       <section className="realty-intro">
         <div className="realty-copy">
           <p className="realty-location">San Diego County</p>
