@@ -2,10 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 
-export function trackSellerEvent(event: string, source: string) {
-  const analytics = window as Window & { gtag?: (command: string, event: string, fields: Record<string, string>) => void };
-  analytics.gtag?.("event", event, { inquiry_source: source });
-}
+import { trackSellerEvent } from "./SellerAnalytics";
 
 export default function SellerRequest({ source }: { source: string }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -44,6 +41,6 @@ export default function SellerRequest({ source }: { source: string }) {
         <button className="seller-button" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Request my estimate"}</button>
         {status === "error" && <p role="alert">Your request couldn’t be sent. Please try again or call Noah below.</p>}
       </form>}
-    <a href="tel:+17073056499" onClick={() => trackSellerEvent("click_to_call", source)}>Call Noah · (707) 305-6499</a>
+    <a href="tel:+17073056499">Call Noah · (707) 305-6499</a>
   </section>;
 }

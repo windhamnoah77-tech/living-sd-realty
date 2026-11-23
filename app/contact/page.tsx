@@ -1,5 +1,6 @@
 "use client";
 
+import { trackSellerEvent } from "../components/SellerAnalytics";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -37,6 +38,7 @@ export default function ContactPage() {
         "Sent. You’ll get a direct reply from Noah with suggested next steps and times."
       );
       form.reset();
+      trackSellerEvent("generate_lead", "contact");
     } catch (err) {
       setStatus("error");
       setStatusMsg("Something failed. Please try again.");

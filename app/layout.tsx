@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 
+import SellerAnalytics from "./components/SellerAnalytics";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
@@ -86,6 +87,7 @@ export default function RootLayout({
           `}
         </Script>
 
+        <SellerAnalytics />
         <Nav />
 
         {/* Consistent spacing under sticky header */}
