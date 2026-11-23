@@ -29,35 +29,51 @@
   }
 
   .brand-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: var(--font-geist-sans), Arial, sans-serif;
+    letter-spacing: -.035em;
   }
 }
 
-.seller-wrap {max-width:76rem;margin:auto;padding:1.5rem clamp(1rem,4vw,3rem) 5rem;color:#17352e}
-.seller-hero,.seller-grid {display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:clamp(2rem,5vw,5rem);margin:1rem 0 4rem}
-.seller-grid {align-items:start}
-.seller-photo {width:100%;height:clamp(20rem,34vw,32rem);object-fit:cover;border-radius:.4rem}
-.seller-wrap h1 {font:500 clamp(2.65rem,5.3vw,4.9rem)/1.04 Georgia,serif;letter-spacing:-.045em;max-width:18ch;margin:1rem 0}
-.seller-wrap h2,.seller-request h2 {font:500 clamp(1.8rem,3vw,2.75rem)/1.1 Georgia,serif;letter-spacing:-.035em;margin:0 0 1rem}
-.seller-hero p,.seller-intro p,.seller-request p,.seller-calc p {line-height:1.65;max-width:62ch;margin:.75rem 0 1.25rem}
-.seller-byline,.seller-intro>p:first-child {color:#476159;font-weight:600}
+.seller-wrap {max-width:76rem;margin:auto;padding:1.5rem clamp(1rem,4vw,3rem) 5rem;color:#1d1d1f}
+.seller-wrap h1 {font:500 clamp(2.65rem,5.3vw,4.9rem)/1.04 var(--font-geist-sans),Arial,sans-serif;letter-spacing:-.045em;max-width:18ch;margin:1rem 0}
+.seller-wrap h2,.seller-request h2 {font:500 clamp(1.8rem,3vw,2.75rem)/1.1 var(--font-geist-sans),Arial,sans-serif;letter-spacing:-.035em;margin:0 0 1rem}
+.seller-intro p,.seller-request p,.seller-calc p {line-height:1.65;max-width:62ch;margin:.75rem 0 1.25rem}
+.seller-intro>p:first-child {color:#515154;font-weight:600}
 .seller-actions {display:flex;align-items:center;flex-wrap:wrap;gap:1.25rem;margin:1.75rem 0}
 .seller-actions a,.seller-request>a {text-decoration:underline;text-underline-offset:.23em}
-.seller-button,.seller-actions .seller-button {background:#184e40;color:white;padding:.9rem 1.25rem;border-radius:.3rem;text-decoration:none;font-weight:600;cursor:pointer}
+.seller-button,.seller-actions .seller-button {background:#0066cc;color:white;padding:.9rem 1.25rem;border-radius:.3rem;text-decoration:none;font-weight:600;cursor:pointer}
 .seller-button:disabled {opacity:.65}
-.seller-request,.seller-calc {background:#f2f5ef;padding:clamp(1.15rem,3.4vw,2.8rem);border-radius:.45rem;margin:2rem 0;scroll-margin-top:6rem}
-.seller-grid .seller-request {margin:0}
+.seller-request,.seller-calc {background:#f5f5f7;padding:clamp(1.15rem,3.4vw,2.8rem);border-radius:.45rem;margin:2rem 0;scroll-margin-top:6rem}
 .seller-request form,.seller-fields {display:grid;gap:1rem;margin:1.2rem 0}
 .seller-request label,.seller-fields label {display:grid;gap:.35rem;font-weight:500}
-.seller-request input,.seller-request textarea,.seller-fields input {width:100%;background:white;border:1px solid #89988e;border-radius:.25rem;padding:.65rem;color:#162820}
+.seller-request input,.seller-request textarea,.seller-fields input {width:100%;background:white;border:1px solid #a1a1a6;border-radius:.25rem;padding:.65rem;color:#1d1d1f}
 .seller-plans,.seller-fields {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
 .seller-calc legend {font-weight:650;margin:1rem 0}
-.plan {background:white;border:1px solid #aab8ae;padding:1rem;display:grid;align-content:start;gap:.7rem;cursor:pointer;border-radius:.35rem}
-.plan.selected {border:2px solid #184e40;padding:calc(1rem - 1px)}
-.plan strong {font:2rem Georgia,serif}.plan input {accent-color:#184e40}
+.plan {background:white;border:1px solid #a1a1a6;padding:1rem;display:grid;align-content:start;gap:.7rem;cursor:pointer;border-radius:.35rem}
+.plan.selected {border:2px solid #0066cc;padding:calc(1rem - 1px)}
+.plan strong {font:2rem var(--font-geist-sans),Arial,sans-serif}.plan input {accent-color:#0066cc}
 .seller-fields {grid-template-columns:repeat(2,minmax(0,1fr));margin-top:2rem}
-.seller-total {display:grid;gap:.25rem;background:#173e33;color:white;padding:1.2rem 1.6rem;border-radius:.3rem}
-.seller-total strong {font:clamp(2rem,5vw,3rem) Georgia,serif}
-.seller-path {display:grid;gap:.3rem;border-top:1px solid #cbd5cd;padding:1rem 0}
-.seller-path strong {text-decoration:underline;text-underline-offset:.2em}
-@media(max-width:760px){.seller-hero,.seller-grid,.seller-plans,.seller-fields{grid-template-columns:1fr}.seller-photo{height:14rem}.seller-hero,.seller-grid{gap:1.3rem;margin-bottom:2rem}}
+.seller-total {display:grid;gap:.25rem;background:#1d1d1f;color:white;padding:1.2rem 1.6rem;border-radius:.3rem}
+.seller-total strong {font:clamp(2rem,5vw,3rem) var(--font-geist-sans),Arial,sans-serif}
+@media(max-width:760px){.seller-plans,.seller-fields{grid-template-columns:1fr}}
+
+body {font-family:var(--font-geist-sans),Arial,sans-serif}
+.practice-home {max-width:76rem;margin:0 auto;padding:0 clamp(1rem,4vw,3rem) 3rem;color:#1d1d1f}
+.practice-hero {padding:clamp(3rem,7vw,6rem) 0 clamp(3.75rem,7vw,6rem);text-align:center}
+.practice-location {font-size:.94rem;font-weight:550;letter-spacing:.015em;color:#545459}
+.practice-hero h1 {font-size:clamp(3.7rem,8.6vw,7.8rem);font-weight:620;line-height:.95;letter-spacing:-.065em;margin:1.35rem 0}
+.practice-summary {max-width:37rem;margin:1.6rem auto;font-size:clamp(1.05rem,1.65vw,1.3rem);line-height:1.48;color:#505054}
+.practice-actions {display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.5rem;margin-top:1.85rem}
+.practice-home a {color:#0066cc;font-weight:540;text-underline-offset:.2em}
+.practice-home a:hover {text-decoration:underline}
+.practice-home .practice-primary {background:#0066cc;color:white;padding:.75rem 1.4rem;border-radius:2rem}
+.practice-services {display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.practice-panel {padding:clamp(1.75rem,4.1vw,3.5rem);border-radius:1.5rem;display:flex;flex-direction:column;align-items:flex-start}
+.practice-panel h2,.practice-fees h2 {font-size:clamp(1.8rem,3.1vw,2.65rem);font-weight:580;letter-spacing:-.05em;line-height:1.1}
+.practice-panel p {font-size:1rem;line-height:1.65;margin:1.1rem 0 1.75rem}
+.practice-panel a {margin-top:auto}
+.estate-panel {background:#161617;color:white}.estate-panel p {color:#dedee1}.estate-panel a {color:#8ec8ff}
+.community-panel {background:#f5f5f7}
+.practice-fees {display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:3rem .3rem}
+.practice-fees p {color:#55555a;margin-top:.6rem}.practice-fees a {white-space:nowrap}
+@media(max-width:680px){.practice-services{grid-template-columns:1fr}.practice-fees{align-items:flex-start;flex-direction:column;gap:1rem}.practice-actions{gap:1rem}}
