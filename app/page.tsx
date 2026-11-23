@@ -3,21 +3,21 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Trust & Estate Real Estate | Living San Diego Realty",
+  title: "San Diego County 55+ Home Sales and Trust & Estate Real Estate",
   description:
-    "Trust & estate real estate representation for trustees, executors, and serious investors across San Diego, the Bay Area, and Los Angeles. Defensible pricing, disciplined marketing, clean execution.",
+    "Seller planning for San Diego County 55+ communities, trust and estate representation, and investor services with Noah Windham.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Trust & Estate Real Estate | Living San Diego Realty",
+    title: "San Diego County 55+ Home Sales and Trust & Estate Real Estate",
     description:
-      "Trust & estate real estate representation for trustees, executors, and serious investors across San Diego, the Bay Area, and Los Angeles. Defensible pricing, disciplined marketing, clean execution.",
+      "Seller planning for San Diego County 55+ communities, trust and estate representation, and investor services with Noah Windham.",
     url: "/",
     type: "website",
   },
   twitter: {
-    title: "Trust & Estate Real Estate | Living San Diego Realty",
+    title: "San Diego County 55+ Home Sales and Trust & Estate Real Estate",
     description:
-      "Trust & estate real estate representation for trustees, executors, and serious investors across San Diego, the Bay Area, and Los Angeles.",
+      "Seller planning for San Diego County 55+ communities, trust and estate representation, and investor services with Noah Windham.",
   },
 };
 
@@ -30,26 +30,23 @@ export default function HomePage() {
         <div className="container grid md:grid-cols-2 gap-10 items-center">
           <div>
             <span className="pill">
-              Trust & Estate · Trustees · Executors · Investors · On/Off-Market
+              San Diego County · 55+ Communities · Trust &amp; Estate
             </span>
 
             <h1 className="mt-5 text-4xl md:text-5xl leading-tight brand-serif">
-              Trust & estate real estate run like a fiduciary decision, not a retail listing.
+              Thinking of selling your home in a San Diego County 55+ community?
             </h1>
 
             <p className="mt-4 text-neutral-600 max-w-prose">
-              I represent trustees, executors, and families in trust and estate
-              property sales, and investors in both on- and off-market transactions
-              across San Diego, the Bay Area, and Los Angeles. Defensible valuation,
-              disciplined negotiation, and marketing built for high-stakes decisions.
+              I’ll help you compare recent sales in your community, estimate your proceeds, and decide what to do before putting your home on the market.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
-                href="/contact"
+                href="/55-plus"
                 className="px-5 py-3 rounded-2xl border border-black bg-black text-white hover:bg-white hover:text-black transition"
               >
-                Request pricing consult
+                Plan my sale
               </Link>
 
               <Link
