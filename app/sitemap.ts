@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
 
+    { url: `${SITE_URL}/listing-options`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/55-plus`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/trust-estate`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/investors`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },

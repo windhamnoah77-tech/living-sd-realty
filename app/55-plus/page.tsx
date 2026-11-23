@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SellerRequest from "../components/SellerRequest";
 import Link from "next/link";
 
 const title = "Selling a Home in a San Diego County 55+ Community";
@@ -19,7 +20,7 @@ export default function CommunitySellerPage() {
         <h1 className="mt-4 brand-serif text-4xl md:text-5xl">What would you walk away with if you sold your home?</h1>
         <p className="mt-5 max-w-prose text-lg">Tell me your community and floor plan. I’ll look at recent sales, explain which homes compare to yours, and estimate what you could take into your next move.</p>
         <div className="mt-7 flex flex-wrap gap-4">
-          <Link href="/contact" className="rounded-2xl bg-black px-5 py-3 text-white">Request my sale estimate</Link>
+          <Link href="#estimate" className="rounded-2xl bg-black px-5 py-3 text-white">Request my sale estimate</Link>
           <a href="tel:+17073056499" className="rounded-2xl border px-5 py-3">Call Noah at (707) 305-6499</a>
         </div>
         <section className="mt-12 border-t pt-8">
@@ -31,6 +32,8 @@ export default function CommunitySellerPage() {
           </dl>
         </section>
         <p className="mt-10 max-w-prose text-neutral-700">Helping my great-aunt move from Ocean Hills Country Club showed me how much has to happen before a home goes on the market. I offer that same planning to homeowners in 55+ communities throughout San Diego County. You can start the conversation even if your move is a year away.</p>
+        <div className="seller-actions"><Link href="/listing-options">Compare listing options and proceeds</Link></div>
+        <SellerRequest source="55_plus" />
       </div>
     </main>
   );
