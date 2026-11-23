@@ -2,6 +2,8 @@ import Link from "next/link";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/listing-fees", label: "1% Listing" },
+  { href: "/55-plus-communities", label: "55+ Communities" },
   { href: "/opportunities", label: "Opportunities" },
   { href: "/process", label: "Process" },
   { href: "/insights", label: "Insights" },
@@ -23,7 +25,7 @@ export default function Footer() {
             <div>2535 Camino del Rio S #325, San Diego, CA 92108</div>
           </div>
           <div className="text-neutral-600 mt-2">
-            San Diego · Bay Area · Los Angeles
+            San Diego County · North County focus
           </div>
         </div>
 
@@ -45,6 +47,7 @@ export default function Footer() {
           <ul className="mt-2 space-y-1 text-neutral-600">
             <li>Equal Housing Opportunity.</li>
             <li>Information deemed reliable but not guaranteed.</li>
+            <li>Listing fees are negotiable and not set by law.</li>
             <li>© {new Date().getFullYear()} Noah Windham. All rights reserved.</li>
           </ul>
         </div>
@@ -62,7 +65,7 @@ export default function Footer() {
                 (707) 305-6499
               </a>
             </div>
-            <div>Based in San Diego · Work across CA by arrangement.</div>
+            <div>Based in San Diego County.</div>
           </div>
         </div>
       </div>

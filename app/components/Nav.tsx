@@ -6,12 +6,11 @@ import { useEffect, useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/opportunities", label: "Opportunities" },
-  { href: "/process", label: "Process" },
   { href: "/trust-estate", label: "Trust & Estate" },
+  { href: "/55-plus-communities", label: "55+ Communities" },
+  { href: "/listing-fees", label: "1% Listing" },
+  { href: "/insights", label: "Seller Guides" },
   { href: "/investors", label: "Investors" },
-  { href: "/insights", label: "Insights" },
-  { href: "/service-areas", label: "Service Areas" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -68,7 +67,7 @@ export default function Nav() {
               href="/contact"
               className="hidden xl:inline-flex rounded-2xl border border-black bg-black px-5 py-3 text-sm text-white transition hover:bg-white hover:text-black whitespace-nowrap"
             >
-              Work with Noah
+              Get my home&apos;s value
             </Link>
 
             {/* Hamburger shows on <xl */}
@@ -106,7 +105,7 @@ export default function Nav() {
               href="/contact"
               className="mt-2 inline-flex justify-center rounded-2xl border border-black bg-black px-5 py-3 text-sm text-white"
             >
-              Work with Noah
+              Get my home&apos;s value
             </Link>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import LeadTracking from "./components/LeadTracking";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Living San Diego Realty",
   },
   description:
-    "Trust & estate real estate representation for trustees, executors, and serious investors. Defensible pricing, disciplined marketing, and clean execution.",
+    "San Diego trust, estate, and 55+ community home sales with Noah Windham. Full-service listings starting at 1%.",
   verification: {
     google: "J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM",
   },
@@ -86,6 +87,7 @@ export default function RootLayout({
           `}
         </Script>
 
+        <LeadTracking />
         <Nav />
 
         {/* Consistent spacing under sticky header */}
