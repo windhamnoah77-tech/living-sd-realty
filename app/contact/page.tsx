@@ -46,7 +46,7 @@ export default function ContactPage() {
   }
 
   // Update these to your actual backup contacts
-  const emailPrimary = "Noahw@PorchLightSoCal.com";
+  const emailPrimary = "noah@blacklabelrealty.com";
   const phonePrimary = "(707) 305-6499";
   const phoneBackup = "(619) 997-0178"; // change this
 
