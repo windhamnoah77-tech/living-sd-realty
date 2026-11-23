@@ -30,13 +30,13 @@ function getInsightRoutes(): MetadataRoute.Sitemap {
 
     const slug = fm.slug ?? slugFromFile;
 
-    // Use updated > date > today
+    // Include a modification date only when the article supplies one.
     const last =
-      fm.updated ?? fm.date ?? new Date().toISOString().slice(0, 10);
+      fm.updated ?? fm.date;
 
     return {
       url: `${SITE_URL}/insights/${slug}`,
-      lastModified: new Date(last),
+      ...(last ? { lastModified: new Date(last) } : {}),
       changeFrequency: "monthly",
       priority: 0.7,
     };
@@ -46,20 +46,20 @@ function getInsightRoutes(): MetadataRoute.Sitemap {
 export default function sitemap(): MetadataRoute.Sitemap {
   // Put ALL of your important app routes here
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
+    { url: `${SITE_URL}/`, changeFrequency: "weekly", priority: 1.0 },
 
     { url: `${SITE_URL}/listing-options`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/55-plus`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${SITE_URL}/trust-estate`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${SITE_URL}/investors`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/trust-estate`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/investors`, changeFrequency: "monthly", priority: 0.9 },
 
-    { url: `${SITE_URL}/process`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${SITE_URL}/opportunities`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${SITE_URL}/service-areas`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_URL}/process`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/opportunities`, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${SITE_URL}/service-areas`, changeFrequency: "monthly", priority: 0.7 },
 
-    { url: `${SITE_URL}/insights`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${SITE_URL}/insights`, changeFrequency: "weekly", priority: 0.8 },
 
-    { url: `${SITE_URL}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/contact`, changeFrequency: "monthly", priority: 0.6 },
   ];
 
   const insightRoutes = getInsightRoutes();

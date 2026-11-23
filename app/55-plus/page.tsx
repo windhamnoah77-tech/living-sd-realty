@@ -33,6 +33,13 @@ export default function CommunitySellerPage() {
         </section>
         <p className="mt-10 max-w-prose text-neutral-700">Helping my great-aunt move from Ocean Hills Country Club showed me how much has to happen before a home goes on the market. I offer that same planning to homeowners in 55+ communities throughout San Diego County. You can start the conversation even if your move is a year away.</p>
         <div className="seller-actions"><Link href="/listing-options">Compare listing options and proceeds</Link></div>
+        <section className="my-10 border-t border-neutral-200 pt-6">
+          <h2 className="brand-serif text-3xl">Local seller guides</h2>
+          <ul className="mt-4 space-y-3 underline">
+            <li><Link href="/insights/oaks-north-villas-comparable-sales">Comparing recent Oaks North Villas sales in Rancho Bernardo</Link></li>
+            <li><Link href="/insights/ocean-hills-country-club-sale-timing">Planning a sale and move in Ocean Hills Country Club</Link></li>
+          </ul>
+        </section>
         <SellerRequest source="55_plus" />
       </div>
     </main>
