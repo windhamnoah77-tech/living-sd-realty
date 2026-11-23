@@ -6,13 +6,12 @@ import { useEffect, useState } from "react";
 
 const links = [
   { href: "/55-plus", label: "55+ Sellers" },
-  { href: "/opportunities", label: "Opportunities" },
-  { href: "/process", label: "Process" },
+  { href: "/listing-options", label: "Listing options" },
   { href: "/trust-estate", label: "Trust & Estate" },
   { href: "/investors", label: "Investors" },
   { href: "/insights", label: "Insights" },
   { href: "/service-areas", label: "Service Areas" },
-  { href: "/contact", label: "Contact" },
+
 ];
 
 export default function Nav() {

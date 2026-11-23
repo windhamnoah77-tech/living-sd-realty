@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     template: "%s | Living San Diego Realty",
   },
   description:
-    "Trust & estate real estate representation for trustees, executors, and serious investors. Defensible pricing, disciplined marketing, and clean execution.",
+    "San Diego home sales, 55+ communities, listing options and trust and estate representation with Noah Windham.",
   verification: {
     google: "J2odBLATDAsa_8J1FJQFZHReovHTEZ3LxcfvUDLe1AM",
   },
   openGraph: {
     title: "Living San Diego Realty | Noah Windham",
     description:
-      "Trust & estate real estate representation for trustees, executors, and serious investors.",
+      "San Diego home sales, 55+ communities, listing options and trust and estate representation with Noah Windham.",
     siteName: "Living San Diego Realty",
     type: "website",
     url: "https://livingsandiegorealty.com",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Living San Diego Realty | Noah Windham",
     description:
-      "Trust & estate real estate representation for trustees, executors, and serious investors.",
+      "San Diego home sales, 55+ communities, listing options and trust and estate representation with Noah Windham.",
     images: ["/opengraph-image"],
   },
   robots: {
@@ -89,9 +89,9 @@ export default function RootLayout({
         <Nav />
 
         {/* Consistent spacing under sticky header */}
-        <main className="pt-6">
+        <div className="pt-6">
           {children}
-        </main>
+        </div>
 
         <Footer />
       </body>

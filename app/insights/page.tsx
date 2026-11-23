@@ -67,14 +67,11 @@ export default async function InsightsIndex({
           <span className="pill">Insights · Trust & Estate · Investors · San Diego</span>
 
           <h1 className="mt-5 text-4xl md:text-5xl leading-tight brand-serif">
-            Practical guidance for trustees, executors, and serious investors.
+            Guides to selling, pricing and planning your next move.
           </h1>
 
           <p className="mt-4 text-neutral-600 max-w-prose">
-            This is a library, not a “blog.” Trustees and executors need defensible
-            pricing, clean disclosures, and disciplined execution. Investors need
-            conservative underwriting and clean terms. The goal is the same: fewer
-            surprises, stronger outcomes.
+            Read worked examples for homeowners, trustees and investors across San Diego County.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-2">
@@ -138,8 +135,7 @@ export default async function InsightsIndex({
             <div>
               <h2 className="brand-serif text-3xl">Start here</h2>
               <p className="mt-2 text-neutral-600 max-w-prose">
-                Pillar guides written to answer the real questions trustees, executors,
-                and investors ask before committing to a plan.
+                Choose a guide for the decision you’re making.
               </p>
             </div>
             <span className="hidden md:inline-flex pill">{filtered.length} guides</span>
@@ -186,20 +182,6 @@ export default async function InsightsIndex({
             ))}
           </div>
 
-          <div className="mt-10 card p-7 bg-neutral-50">
-            <div className="text-xs uppercase tracking-[0.2em] text-neutral-500">
-              SEO positioning (for Google + humans)
-            </div>
-            <p className="mt-4 text-neutral-700 max-w-prose">
-              <span className="font-semibold">
-                Trust &amp; estate real estate in San Diego
-              </span>{" "}
-              is not a standard retail sale. Trustees and executors need defensible
-              valuation logic, disciplined disclosures, tight terms, and a clean file
-              from listing to close. Investors need conservative underwriting, fast
-              execution, and a pipeline that’s filtered, not noisy.
-            </p>
-          </div>
         </div>
       </section>
     </main>
