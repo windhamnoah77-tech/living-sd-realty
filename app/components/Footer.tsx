@@ -19,7 +19,8 @@ export default function Footer() {
           <div className="font-serif text-lg">Living San Diego Realty</div>
           <div className="text-neutral-600 mt-2">
             Noah Windham · CA DRE #02227646
-            <div>PorchLight Realty, brokered by eXp Realty of Southern California · CA DRE #02187306</div>
+            <div>Black Label Realty · CA DRE #02254507</div>
+            <div>2535 Camino del Rio S #325, San Diego, CA 92108</div>
           </div>
           <div className="text-neutral-600 mt-2">
             San Diego · Bay Area · Los Angeles
@@ -52,8 +53,8 @@ export default function Footer() {
           <div className="font-medium">Contact</div>
           <div className="mt-2 space-y-1 text-neutral-600">
             <div>
-              <a className="underline" href="mailto:Noahw@PorchLightSoCal.com">
-                Noahw@PorchLightSoCal.com
+              <a className="underline" href="mailto:noah@blacklabelrealty.com">
+                noah@blacklabelrealty.com
               </a>
             </div>
             <div>

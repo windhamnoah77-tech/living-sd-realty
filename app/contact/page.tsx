@@ -46,7 +46,7 @@ export default function ContactPage() {
   }
 
   // Update these to your actual backup contacts
-  const emailPrimary = "Noahw@PorchLightSoCal.com";
+  const emailPrimary = "noah@blacklabelrealty.com";
   const phonePrimary = "(707) 305-6499";
   const phoneBackup = "(619) 997-0178"; // change this
 
@@ -63,9 +63,7 @@ export default function ContactPage() {
               Quick, clean, and confidential.
             </h1>
             <p className="mt-4 text-neutral-700 max-w-prose">
-              If you’re a trustee/executor, you’re making a fiduciary decision.
-              My job is to give you a defensible plan: pricing logic, timeline,
-              and next steps, without the usual agent noise.
+              Tell me about the property and what you’re deciding. If you own a home in a 55+ community, your community name and floor plan are enough to start.
             </p>
 
             <div className="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
@@ -169,11 +167,13 @@ export default function ContactPage() {
               <select
                 name="role"
                 className="w-full rounded-2xl border border-neutral-300 px-4 py-3"
-                defaultValue="Trustee / executor (trust or estate sale)"
+                defaultValue=""
               >
+                <option value="">Select your role</option>
                 <option>Trustee / executor (trust or estate sale)</option>
                 <option>Investor</option>
                 <option>Seller</option>
+                <option>55+ community homeowner</option>
                 <option>Buyer</option>
                 <option>Other</option>
               </select>
