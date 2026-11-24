@@ -80,7 +80,10 @@ const jsonLd = [
 ];
 
 export default function HomePage() {
-  const featured = communities.slice(0, 6);
+  // Communities with their own seller guide first, then the rest.
+  const featured = [...communities]
+    .sort((a, b) => Number(Boolean(b.slug)) - Number(Boolean(a.slug)))
+    .slice(0, 6);
 
   return (
     <main>
